@@ -153,3 +153,1178 @@ Name: CAL_ACREAGE, dtype: float64
 2025-08-20 16:01:19 - __main__ - INFO - Would process 10 parcels
 2025-08-20 16:01:19 - __main__ - INFO - Estimated chunks: 1
 2025-08-20 16:01:19 - __main__ - INFO - Estimated memory: 1000.1017065048218 MB
+2025-08-20 16:02:29 - src.data_loader - INFO - Loaded 1979520 parcels
+2025-08-20 16:02:29 - src.data_loader - INFO - CRS: {"$schema": "https://proj.org/schemas/v0.7/projjson.schema.json", "type": "GeographicCRS", "name": "WGS 84", "datum": {"type": "GeodeticReferenceFrame", "name": "World Geodetic System 1984", "ellipsoid": {"name": "WGS 84", "semi_major_axis": 6378137, "inverse_flattening": 298.257223563}}, "coordinate_system": {"subtype": "ellipsoidal", "axis": [{"name": "Geodetic latitude", "abbreviation": "Lat", "direction": "north", "unit": "degree"}, {"name": "Geodetic longitude", "abbreviation": "Lon", "direction": "east", "unit": "degree"}]}, "id": {"authority": "EPSG", "code": 4326}}
+2025-08-20 16:02:29 - src.data_loader - INFO - Columns: ['PARCEL_LID', 'ASSESSMENT_LID', 'FIPS_CODE', 'FIPS_STATE_CODE', 'FIPS_MUNI_CODE', 'UNIQUE_PARCEL_APN', 'PARCEL_APN', 'COUNTY', 'TAXAPN', 'TAXAPN_UNF', 'DUPE_TAXAPN_SEQ', 'UNIQUE_TAXAPN', 'ALTERNATE_TAXAPN', 'ALTERNATE_TAXAPN_INDICATOR', 'ALTERNATE_TAXAPN_INDICATOR_DESC', 'ASSOCIATED_ASSESSMENT_COUNT', 'SITE_ADDR', 'SITE_HOUSE_NUMBER', 'SITE_DIRECTION', 'SITE_STREET_NAME', 'SITE_MODE', 'SITE_QUADRANT', 'SITE_UNIT_PREFIX', 'SITE_UNIT_NUMBER', 'SITE_CITY', 'SITE_STATE', 'SITE_ZIP', 'SITE_PLUS_4', 'SITE_CARRIER_CODE', 'ADDR_SCORE', 'CENSUS_TRACT', 'CENSUS_BLOCK_GROUP', 'CENSUS_BLOCK', 'CBSA_CODE', 'MUNICIPALITY', 'MSA_CODE', 'MSA_CODE_DESC', 'AGGR_ACREAGE', 'AGGR_GROUP', 'AGGR_LOT_WIDTH_MEDIAN', 'AGGR_LOT_COUNT', 'OWNER_OCCUPIED', 'OWNER_NAME', 'OWNER_NAME_1', 'OWNER_1_FIRST', 'OWNER_1_LAST', 'OWNER_1_MID', 'OWNER_NAME_2', 'OWNER_2_FIRST', 'OWNER_2_LAST', 'OWNER_2_MID', 'OWNERSHIP_STATUS_CODE', 'OWNERSHIP_STATUS_DESC', 'COMPANY_FLAG', 'OWNER_SRC_CODE', 'TIMESHARE_CODE', 'MAIL_HOUSE_NUMBER', 'MAIL_HOUSE_NUMBER_SUFFIX', 'MAIL_DIRECTION', 'MAIL_STREET_NAME', 'MAIL_MODE', 'MAIL_QUADRANT', 'MAIL_UNIT_PREFIX', 'MAIL_UNIT_NUMBER', 'MAIL_CITY', 'MAIL_STATE', 'MAIL_ZIP', 'MAIL_PLUS_4', 'MAIL_CRRT', 'MAIL_CARE_OF_NAME', 'MAIL_ADDR', 'USE_CODE_MUNI', 'USE_CODE_MUNI_DESC', 'USE_CODE_STD_LPS', 'USE_CODE_STD_DESC_LPS', 'USE_CODE_STD_CTGR_DESC_LPS', 'USE_CODE_STD_CTGR_LPS', 'STATE_LAND_USE_CODE', 'STATE_LAND_USE_CODE_DESC', 'LOT_WIDTH', 'LOT_DEPTH', 'ACREAGE', 'LAND_SQFT', 'ASSR_ACREAGE', 'ASSR_SQFT', 'CAL_ACREAGE', 'CAL_SQFT', 'LOT_SIZE_AREA', 'LOT_SIZE_AREA_UNIT', 'LOT_SIZE_AREA_ORGN', 'TOPOGRAPHY', 'TOPOGRAPHY_DESC', 'VAL_ASSD', 'VAL_ASSD_LAND', 'VAL_ASSD_IMPRV', 'IMPRV_PCT', 'VAL_MARKET', 'LAND_PER_SQFT', 'IMPRV_PER_SQFT', 'DATE_CERT', 'RECORD_TYPE', 'RECORD_TYPE_DESC', 'ASMT_RCDRS_BOOK', 'ASMT_RCDRS_PAGE', 'VAL_MRKT_LAND', 'VAL_MRKT_IMPRV', 'YR_MRKT_VAL', 'DATE_ASSR_TAPE_CUT', 'ASMT_YEAR', 'ASMT_RCDRS_DOC_NUMBER', 'ASMT_RCDRS_DATE_TRANSFER', 'ASMT_DOC_TYPE', 'ASMT_VAL_TRANSFER', 'ASMT_SALE_CODE', 'ASMT_SALE_CODE_DESC', 'ASMT_PRIOR_SALE_DATE_TRANSFER', 'ASMT_PRIOR_SALE_VAL_TRANSFER', 'ASMT_PRIOR_SALE_SALE_CODE', 'ASMT_LNDR_NAME', 'BLOCK_NUMBER', 'LOT_NUMBER', 'SUBDIVISION', 'TRACT_NUMBER', 'LEGAL_1', 'LOT_CODE', 'LAND_LOT', 'DISTRICT', 'LEGAL_UNIT', 'PHASE_NBR', 'ASSR_MAP_REF', 'CITY_SECTION', 'LEGAL_FULL', 'LEGAL_SEC_TWP_RNG', 'ZONING', 'TOWNSHIP', 'RANGE', 'SECTION', 'TAX_RATE_CODE_AREA', 'TAX_SRC_CODE', 'TAX_ACCT_NBR', 'TAX_YEAR', 'TAX_AMOUNT', 'TAX_YEAR_DELINQ', 'TAX_EXEMPT_CODES', 'TAX_EXEMPT_CODES_DESC', 'CA_HOME_OWNERS_EXEMPT', 'YR_BLT', 'YR_BLT_EFFECT', 'BLDG_NUMBER', 'BUILDING_SQFT', 'BSMT_1_CODE', 'BASEMENT_FINISH_DESC', 'ELECT_AVAIL_CODE', 'ELECT_AVAIL_CODE_DESC', 'BEDROOMS', 'TOTAL_ROOMS', 'TOTAL_BATHS_CALCULATED', 'TOTAL_BATHS', 'PARTIAL_BATHS', 'AIR_CONDITIONING', 'AIR_CONDITIONING_TYPE_DESC', 'CONSTRUCTION_CODE', 'CONSTRUCTION_CODE_DESC', 'EXTERIOR_WALL_TYPE', 'EXTERIOR_WALL_DESC', 'FIREPLACE_TYPE', 'FOUNDATION_TYPE', 'FOUNDATION_TYPE_DESC', 'GARAGE_CARPORT_TYPE', 'GARAGE_CODE_DESC', 'HEATING_TYPE', 'HEATING_DESC', 'PARKING_SPACES', 'POOL_INDICATOR', 'POOL_INDICATOR_DESC', 'ROOF_COVER_TYPE', 'ROOF_COVER_DESC', 'STORIES_NUMBER', 'STORIES_NUMBER_DESC', 'STYLE_TYPE', 'STYLE_DESC', 'UNITS_NUMBER', 'BLDG_CLASS', 'BLDG_CLASS_DESC', 'BUILDING_QUALITY', 'FLOOR_COVER', 'FLOOR_COVER_DESC', 'PLUMBING_FIXTURES', 'HEATING_FUEL_TYPE', 'HEATING_FUEL_TYPE_DESC', 'AIR_CONDITIONING_TYPE', 'AIR_CONDITIONING_DESC', 'INTERIOR_WALLS', 'INTERIOR_WALLS_DESC', 'BLDG_AREA_1', 'BLDG_AREA_1_INDICATOR', 'BLDG_AREA_1_DESC', 'BLDG_AREA_2', 'BLDG_AREA_2_INDICATOR', 'BLDG_AREA_2_DESC', 'BLDG_AREA_3', 'BLDG_AREA_3_INDICATOR', 'BLDG_AREA_3_DESC', 'BLDG_AREA_4', 'BLDG_AREA_4_INDICATOR', 'BLDG_AREA_4_DESC', 'BLDG_AREA_5', 'BLDG_AREA_5_INDICATOR', 'BLDG_AREA_5_DESC', 'BLDG_AREA_6', 'BLDG_AREA_6_INDICATOR', 'BLDG_AREA_6_DESC', 'BLDG_AREA_7', 'BLDG_AREA_7_INDICATOR', 'BLDG_AREA_7_DESC', 'SCHOOL_TAX_DIST_1', 'SCHOOL_TAX_DIST_1_IND', 'SCHOOL_TAX_DIST_1_DESC', 'SCHOOL_TAX_DIST_2', 'SCHOOL_TAX_DIST_2_IND', 'SCHOOL_TAX_DIST_2_DESC', 'SCHOOL_TAX_DIST_3', 'SCHOOL_TAX_DIST_3_IND', 'SCHOOL_TAX_DIST_3_DESC', 'SITE_INFLUENCE', 'SITE_INFLUENCE_DESCRIPTION', 'AMENITIES', 'AMENITIES_DESC', 'AMENITIES_2', 'AMENITIES_2_DESC', 'OTHER_IMPR_BLDG_IND_1', 'OTHER_IMPR_BLDG_1_DESC', 'OTHER_IMPR_BLDG_IND_2', 'OTHER_IMPR_BLDG_2_DESC', 'OTHER_IMPR_BLDG_IND_3', 'OTHER_IMPR_BLDG_3_DESC', 'OTHER_IMPR_BLDG_IND_4', 'OTHER_IMPR_BLDG_4_DESC', 'OTHER_IMPR_BLDG_IND_5', 'OTHER_IMPR_BLDG_5_DESC', 'NEIGHBORHOOD_CODE', 'CONDO_PROJECT_BUILDING_NAME', 'OTHER_IMPR_BLDG_AREA_1', 'OTHER_IMPR_BLDG_AREA_1_DIMENSIONS', 'OTHER_IMPR_BLDG_AREA_1_SQFT', 'OTHER_IMPR_BLDG_AREA_2', 'OTHER_IMPR_BLDG_AREA_2_DIMENSIONS', 'OTHER_IMPR_BLDG_AREA_2_SQFT', 'OTHER_IMPR_BLDG_AREA_3', 'OTHER_IMPR_BLDG_AREA_3_DIMENSIONS', 'OTHER_IMPR_BLDG_AREA_3_SQFT', 'OTHER_IMPR_BLDG_AREA_4', 'OTHER_IMPR_BLDG_AREA_4_DIMENSIONS', 'OTHER_IMPR_BLDG_AREA_4_SQFT', 'OTHER_IMPR_BLDG_AREA_5', 'OTHER_IMPR_BLDG_AREA_5_DIMENSIONS', 'OTHER_IMPR_BLDG_AREA_5_SQFT', 'OTHER_ROOMS', 'OTHER_ROOMS_DESC', 'EXTRA_FEATURES_AREA_1', 'EXTRA_FEATURES_AREA_1_DIMENSIONS', 'EXTRA_FEATURES_AREA_1_SQFT', 'EXTRA_FEATURES_AREA_1_IND', 'EXTRA_FEATURES_AREA_1_DESC', 'EXTRA_FEATURES_AREA_2', 'EXTRA_FEATURES_AREA_2_DIMENSIONS', 'EXTRA_FEATURES_AREA_2_SQFT', 'EXTRA_FEATURES_AREA_2_IND', 'EXTRA_FEATURES_AREA_2_DESC', 'EXTRA_FEATURES_AREA_3', 'EXTRA_FEATURES_AREA_3_DIMENSIONS', 'EXTRA_FEATURES_AREA_3_SQFT', 'EXTRA_FEATURES_AREA_3_IND', 'EXTRA_FEATURES_AREA_3_DESC', 'EXTRA_FEATURES_AREA_4', 'EXTRA_FEATURES_AREA_4_DIMENSIONS', 'EXTRA_FEATURES_AREA_4_SQFT', 'EXTRA_FEATURES_AREA_4_IND', 'EXTRA_FEATURES_AREA_4_DESC', 'ROOF_TYPE', 'ROOF_TYPE_DESC', 'BUILDING_CONDITION', 'BUILDING_CONDITION_DESC', 'WATER', 'WATER_CODE_DESC', 'SEWER', 'SEWER_DESC', 'BUILDING_AREA_INDICATOR', 'BUILDING_AREA_INDICATOR_DESC', 'ASMT_MAIL_CARE_OF_NAME_INDICATOR', 'ASMT_MAIL_CARE_OF_NAME_TYPE', 'ASMT_MAIL_CARE_OF_NAME', 'ASMT_MAIL_HOUSE_NUMBER', 'ASMT_MAIL_DIRECTION', 'ASMT_MAIL_STREET_NAME', 'ASMT_MAIL_MODE', 'ASMT_MAIL_QUADRANT', 'ASMT_MAIL_CARRIER_CODE', 'ASMT_OWNER_OCCUPIED', 'GEOMETRY_SOURCE', 'POINT_GEOMETRY', 'geometry']
+2025-08-20 16:02:29 - src.data_loader - INFO - Memory usage: 19804.9 MB
+2025-08-20 16:02:29 - src.data_loader - INFO - Acreage statistics:
+count    1.945505e+06
+mean     3.645420e+01
+std      5.738457e+02
+min      0.000000e+00
+25%      1.422000e-01
+50%      2.423000e-01
+75%      2.014500e+00
+max      4.198910e+04
+Name: CAL_ACREAGE, dtype: float64
+2025-08-20 16:02:29 - src.data_loader - WARNING - CRS mismatch: Raster PROJCS["Albers_Conical_Equal_Area",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",23],PARAMETER["longitude_of_center",-96],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]] vs Parcels {"$schema": "https://proj.org/schemas/v0.7/projjson.schema.json", "type": "GeographicCRS", "name": "WGS 84", "datum": {"type": "GeodeticReferenceFrame", "name": "World Geodetic System 1984", "ellipsoid": {"name": "WGS 84", "semi_major_axis": 6378137, "inverse_flattening": 298.257223563}}, "coordinate_system": {"subtype": "ellipsoidal", "axis": [{"name": "Geodetic latitude", "abbreviation": "Lat", "direction": "north", "unit": "degree"}, {"name": "Geodetic longitude", "abbreviation": "Lon", "direction": "east", "unit": "degree"}]}, "id": {"authority": "EPSG", "code": 4326}}
+2025-08-20 16:02:29 - src.data_loader - INFO - Parcels will need to be reprojected
+2025-08-20 16:02:29 - src.data_loader - INFO - Raster bounds: BoundingBox(left=-2361585.0, bottom=259065.0, right=2263815.0, top=3177435.0)
+2025-08-20 16:02:29 - src.data_loader - INFO - Parcel bounds: [-124.56660025   41.99236756 -116.46371338   46.29228763]
+2025-08-20 16:02:29 - src.data_loader - INFO - Processing estimates:
+2025-08-20 16:02:29 - src.data_loader - INFO -   total_parcels: 1979520
+2025-08-20 16:02:29 - src.data_loader - INFO -   raster_size_mb: 14303.661556243896
+2025-08-20 16:02:29 - src.data_loader - INFO -   parcel_size_mb: 19804.913001060486
+2025-08-20 16:02:29 - src.data_loader - INFO -   estimated_chunks: 396
+2025-08-20 16:02:29 - src.data_loader - INFO -   estimated_memory_peak_mb: 20804.913001060486
+2025-08-20 16:02:29 - __main__ - INFO - ----------------------------------------
+2025-08-20 16:02:29 - __main__ - INFO - STEP 2: Preprocessing parcels
+2025-08-20 16:02:29 - src.preprocessor - INFO - Starting preprocessing pipeline
+2025-08-20 16:02:29 - src.preprocessor - INFO - Transforming parcels from {"$schema": "https://proj.org/schemas/v0.7/projjson.schema.json", "type": "GeographicCRS", "name": "WGS 84", "datum": {"type": "GeodeticReferenceFrame", "name": "World Geodetic System 1984", "ellipsoid": {"name": "WGS 84", "semi_major_axis": 6378137, "inverse_flattening": 298.257223563}}, "coordinate_system": {"subtype": "ellipsoidal", "axis": [{"name": "Geodetic latitude", "abbreviation": "Lat", "direction": "north", "unit": "degree"}, {"name": "Geodetic longitude", "abbreviation": "Lon", "direction": "east", "unit": "degree"}]}, "id": {"authority": "EPSG", "code": 4326}} to +proj=aea +lat_0=23 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs
+2025-08-20 16:02:49 - src.preprocessor - INFO - Validating geometries
+2025-08-20 16:02:53 - src.preprocessor - WARNING - Found 1054 invalid geometries, attempting repair
+2025-08-20 16:02:59 - src.preprocessor - INFO - Validation complete: 1979520 valid geometries
+2025-08-20 16:02:59 - src.preprocessor - INFO - Transformed 1979520 parcels
+2025-08-20 16:02:59 - src.preprocessor - INFO - New bounds: [-2296937.89205909  2301515.26543265 -1584424.69253147  2906227.64101602]
+2025-08-20 16:02:59 - src.preprocessor - INFO - Validating geometries
+2025-08-20 16:03:03 - src.preprocessor - INFO - Validation complete: 1979520 valid geometries
+2025-08-20 16:03:03 - src.preprocessor - INFO - Clipping parcels to raster extent: BoundingBox(left=-2361585.0, bottom=259065.0, right=2263815.0, top=3177435.0)
+2025-08-20 16:03:09 - src.preprocessor - INFO - Clipped 0 parcels outside raster extent
+2025-08-20 16:03:09 - src.preprocessor - INFO - Remaining parcels: 1979520
+2025-08-20 16:03:10 - src.preprocessor - INFO - Filtering parcels by area
+2025-08-20 16:03:14 - src.preprocessor - INFO - Filtered 901836 parcels by area
+2025-08-20 16:03:14 - src.preprocessor - INFO - Area range: 900.0 - inf m²
+2025-08-20 16:03:14 - src.preprocessor - INFO - Remaining parcels: 1077684
+2025-08-20 16:03:16 - src.preprocessor - INFO - Building spatial index
+2025-08-20 16:03:16 - src.preprocessor - INFO - Spatial index created
+2025-08-20 16:03:16 - src.preprocessor - INFO - Preprocessing complete: 1077684 parcels ready
+2025-08-20 16:03:17 - __main__ - INFO - ----------------------------------------
+2025-08-20 16:03:17 - __main__ - INFO - STEP 3: Processing parcels in chunks
+2025-08-20 16:03:17 - src.chunk_manager - INFO - Creating chunks using count strategy
+2025-08-20 16:03:17 - src.chunk_manager - INFO - Created 216 chunks
+2025-08-20 16:03:17 - src.chunk_manager - INFO - Chunk sizes: min=2684, max=5000, mean=4989.3
+2025-08-20 16:03:17 - src.chunk_manager - INFO - Processing 216 chunks
+2025-08-20 16:03:17 - __main__ - INFO - Processing chunk 0 (5000 parcels)
+2025-08-20 16:03:17 - src.zonal_processor - INFO - Processing 5000 parcels
+2025-08-20 16:03:17 - src.zonal_processor - INFO - Loaded raster window: (3223, 5041)
+2025-08-20 16:03:17 - src.zonal_processor - INFO - Calculating zonal statistics
+2025-08-20 16:03:22 - src.zonal_processor - INFO - Processed 5000 parcels in 4.40s (1136.6 parcels/s)
+2025-08-20 16:03:22 - __main__ - INFO - Progress: 5000/1077684 parcels processed
+2025-08-20 16:03:22 - __main__ - INFO - Processing chunk 1 (5000 parcels)
+2025-08-20 16:03:22 - src.zonal_processor - INFO - [Chunk 1] Processing 5000 parcels
+2025-08-20 16:03:22 - src.zonal_processor - INFO - [Chunk 1] Loaded raster window: (3232, 5087)
+2025-08-20 16:03:22 - src.zonal_processor - INFO - [Chunk 1] Calculating zonal statistics
+2025-08-20 16:03:26 - src.zonal_processor - INFO - [Chunk 1] Processed 5000 parcels in 4.33s (1155.0 parcels/s)
+2025-08-20 16:03:26 - __main__ - INFO - Processing chunk 2 (5000 parcels)
+2025-08-20 16:03:26 - src.zonal_processor - INFO - [Chunk 2] Processing 5000 parcels
+2025-08-20 16:03:27 - src.zonal_processor - INFO - [Chunk 2] Loaded raster window: (5716, 18522)
+2025-08-20 16:03:27 - src.zonal_processor - INFO - [Chunk 2] Calculating zonal statistics
+2025-08-20 16:03:31 - src.zonal_processor - INFO - [Chunk 2] Processed 5000 parcels in 4.60s (1087.4 parcels/s)
+2025-08-20 16:03:31 - __main__ - INFO - Processing chunk 3 (5000 parcels)
+2025-08-20 16:03:31 - src.zonal_processor - INFO - [Chunk 3] Processing 5000 parcels
+2025-08-20 16:03:31 - src.zonal_processor - INFO - [Chunk 3] Loaded raster window: (1839, 2165)
+2025-08-20 16:03:31 - src.zonal_processor - INFO - [Chunk 3] Calculating zonal statistics
+2025-08-20 16:03:35 - src.zonal_processor - INFO - [Chunk 3] Processed 5000 parcels in 3.92s (1274.1 parcels/s)
+2025-08-20 16:03:35 - __main__ - INFO - Processing chunk 4 (5000 parcels)
+2025-08-20 16:03:35 - src.zonal_processor - INFO - [Chunk 4] Processing 5000 parcels
+2025-08-20 16:03:35 - src.zonal_processor - INFO - [Chunk 4] Loaded raster window: (1804, 2242)
+2025-08-20 16:03:35 - src.zonal_processor - INFO - [Chunk 4] Calculating zonal statistics
+2025-08-20 16:03:39 - src.zonal_processor - INFO - [Chunk 4] Processed 5000 parcels in 3.84s (1301.2 parcels/s)
+2025-08-20 16:03:39 - __main__ - INFO - Processing chunk 5 (5000 parcels)
+2025-08-20 16:03:39 - src.zonal_processor - INFO - [Chunk 5] Processing 5000 parcels
+2025-08-20 16:03:39 - src.zonal_processor - INFO - [Chunk 5] Loaded raster window: (1843, 2228)
+2025-08-20 16:03:39 - src.zonal_processor - INFO - [Chunk 5] Calculating zonal statistics
+2025-08-20 16:03:42 - src.zonal_processor - INFO - [Chunk 5] Processed 5000 parcels in 3.85s (1298.4 parcels/s)
+2025-08-20 16:03:42 - __main__ - INFO - Processing chunk 6 (5000 parcels)
+2025-08-20 16:03:42 - src.zonal_processor - INFO - [Chunk 6] Processing 5000 parcels
+2025-08-20 16:03:42 - src.zonal_processor - INFO - [Chunk 6] Loaded raster window: (1855, 2176)
+2025-08-20 16:03:42 - src.zonal_processor - INFO - [Chunk 6] Calculating zonal statistics
+2025-08-20 16:03:46 - src.zonal_processor - INFO - [Chunk 6] Processed 5000 parcels in 3.76s (1328.9 parcels/s)
+2025-08-20 16:03:46 - __main__ - INFO - Processing chunk 7 (5000 parcels)
+2025-08-20 16:03:46 - src.zonal_processor - INFO - [Chunk 7] Processing 5000 parcels
+2025-08-20 16:03:46 - src.zonal_processor - INFO - [Chunk 7] Loaded raster window: (3788, 6263)
+2025-08-20 16:03:46 - src.zonal_processor - INFO - [Chunk 7] Calculating zonal statistics
+2025-08-20 16:03:50 - src.zonal_processor - INFO - [Chunk 7] Processed 5000 parcels in 3.92s (1274.2 parcels/s)
+2025-08-20 16:03:50 - __main__ - INFO - Processing chunk 8 (5000 parcels)
+2025-08-20 16:03:50 - src.zonal_processor - INFO - [Chunk 8] Processing 5000 parcels
+2025-08-20 16:03:50 - src.zonal_processor - INFO - [Chunk 8] Loaded raster window: (2195, 2897)
+2025-08-20 16:03:50 - src.zonal_processor - INFO - [Chunk 8] Calculating zonal statistics
+2025-08-20 16:03:54 - src.zonal_processor - INFO - [Chunk 8] Processed 5000 parcels in 3.78s (1321.6 parcels/s)
+2025-08-20 16:03:54 - __main__ - INFO - Processing chunk 9 (5000 parcels)
+2025-08-20 16:03:54 - src.zonal_processor - INFO - [Chunk 9] Processing 5000 parcels
+2025-08-20 16:03:54 - src.zonal_processor - INFO - [Chunk 9] Loaded raster window: (2698, 2877)
+2025-08-20 16:03:54 - src.zonal_processor - INFO - [Chunk 9] Calculating zonal statistics
+2025-08-20 16:03:58 - src.zonal_processor - INFO - [Chunk 9] Processed 5000 parcels in 3.81s (1312.2 parcels/s)
+2025-08-20 16:03:58 - __main__ - INFO - Processing chunk 10 (5000 parcels)
+2025-08-20 16:03:58 - src.zonal_processor - INFO - [Chunk 10] Processing 5000 parcels
+2025-08-20 16:03:58 - src.zonal_processor - INFO - [Chunk 10] Loaded raster window: (2419, 2943)
+2025-08-20 16:03:58 - src.zonal_processor - INFO - [Chunk 10] Calculating zonal statistics
+2025-08-20 16:04:01 - src.zonal_processor - INFO - [Chunk 10] Processed 5000 parcels in 3.75s (1332.9 parcels/s)
+2025-08-20 16:04:02 - __main__ - INFO - Progress: 55000/1077684 parcels processed
+2025-08-20 16:04:02 - __main__ - INFO - Processing chunk 11 (5000 parcels)
+2025-08-20 16:04:02 - src.zonal_processor - INFO - [Chunk 11] Processing 5000 parcels
+2025-08-20 16:04:02 - src.zonal_processor - INFO - [Chunk 11] Loaded raster window: (2191, 2907)
+2025-08-20 16:04:02 - src.zonal_processor - INFO - [Chunk 11] Calculating zonal statistics
+2025-08-20 16:04:05 - src.zonal_processor - INFO - [Chunk 11] Processed 5000 parcels in 3.79s (1321.0 parcels/s)
+2025-08-20 16:04:05 - __main__ - INFO - Processing chunk 12 (5000 parcels)
+2025-08-20 16:04:05 - src.zonal_processor - INFO - [Chunk 12] Processing 5000 parcels
+2025-08-20 16:04:05 - src.zonal_processor - INFO - [Chunk 12] Loaded raster window: (2153, 2905)
+2025-08-20 16:04:05 - src.zonal_processor - INFO - [Chunk 12] Calculating zonal statistics
+2025-08-20 16:04:09 - src.zonal_processor - INFO - [Chunk 12] Processed 5000 parcels in 3.78s (1323.7 parcels/s)
+2025-08-20 16:04:09 - __main__ - INFO - Processing chunk 13 (5000 parcels)
+2025-08-20 16:04:09 - src.zonal_processor - INFO - [Chunk 13] Processing 5000 parcels
+2025-08-20 16:04:09 - src.zonal_processor - INFO - [Chunk 13] Loaded raster window: (2675, 2978)
+2025-08-20 16:04:09 - src.zonal_processor - INFO - [Chunk 13] Calculating zonal statistics
+2025-08-20 16:04:13 - src.zonal_processor - INFO - [Chunk 13] Processed 5000 parcels in 3.92s (1277.1 parcels/s)
+2025-08-20 16:04:13 - __main__ - INFO - Processing chunk 14 (5000 parcels)
+2025-08-20 16:04:13 - src.zonal_processor - INFO - [Chunk 14] Processing 5000 parcels
+2025-08-20 16:04:13 - src.zonal_processor - INFO - [Chunk 14] Loaded raster window: (2200, 2904)
+2025-08-20 16:04:13 - src.zonal_processor - INFO - [Chunk 14] Calculating zonal statistics
+2025-08-20 16:04:17 - src.zonal_processor - INFO - [Chunk 14] Processed 5000 parcels in 3.72s (1343.9 parcels/s)
+2025-08-20 16:04:17 - __main__ - INFO - Processing chunk 15 (5000 parcels)
+2025-08-20 16:04:17 - src.zonal_processor - INFO - [Chunk 15] Processing 5000 parcels
+2025-08-20 16:04:17 - src.zonal_processor - INFO - [Chunk 15] Loaded raster window: (2307, 2901)
+2025-08-20 16:04:17 - src.zonal_processor - INFO - [Chunk 15] Calculating zonal statistics
+2025-08-20 16:04:21 - src.zonal_processor - INFO - [Chunk 15] Processed 5000 parcels in 4.10s (1220.7 parcels/s)
+2025-08-20 16:04:21 - __main__ - INFO - Processing chunk 16 (5000 parcels)
+2025-08-20 16:04:21 - src.zonal_processor - INFO - [Chunk 16] Processing 5000 parcels
+2025-08-20 16:04:21 - src.zonal_processor - INFO - [Chunk 16] Loaded raster window: (2170, 2897)
+2025-08-20 16:04:21 - src.zonal_processor - INFO - [Chunk 16] Calculating zonal statistics
+2025-08-20 16:04:25 - src.zonal_processor - INFO - [Chunk 16] Processed 5000 parcels in 3.88s (1288.9 parcels/s)
+2025-08-20 16:04:25 - __main__ - INFO - Processing chunk 17 (5000 parcels)
+2025-08-20 16:04:25 - src.zonal_processor - INFO - [Chunk 17] Processing 5000 parcels
+2025-08-20 16:04:25 - src.zonal_processor - INFO - [Chunk 17] Loaded raster window: (2594, 2907)
+2025-08-20 16:04:25 - src.zonal_processor - INFO - [Chunk 17] Calculating zonal statistics
+2025-08-20 16:04:29 - src.zonal_processor - INFO - [Chunk 17] Processed 5000 parcels in 3.79s (1320.0 parcels/s)
+2025-08-20 16:04:29 - __main__ - INFO - Processing chunk 18 (5000 parcels)
+2025-08-20 16:04:29 - src.zonal_processor - INFO - [Chunk 18] Processing 5000 parcels
+2025-08-20 16:04:29 - src.zonal_processor - INFO - [Chunk 18] Loaded raster window: (2250, 2910)
+2025-08-20 16:04:29 - src.zonal_processor - INFO - [Chunk 18] Calculating zonal statistics
+2025-08-20 16:04:32 - src.zonal_processor - INFO - [Chunk 18] Processed 5000 parcels in 3.75s (1334.0 parcels/s)
+2025-08-20 16:04:32 - __main__ - INFO - Processing chunk 19 (5000 parcels)
+2025-08-20 16:04:32 - src.zonal_processor - INFO - [Chunk 19] Processing 5000 parcels
+2025-08-20 16:04:32 - src.zonal_processor - INFO - [Chunk 19] Loaded raster window: (2412, 2910)
+2025-08-20 16:04:32 - src.zonal_processor - INFO - [Chunk 19] Calculating zonal statistics
+2025-08-20 16:04:36 - src.zonal_processor - INFO - [Chunk 19] Processed 5000 parcels in 3.88s (1288.8 parcels/s)
+2025-08-20 16:04:36 - __main__ - INFO - Processing chunk 20 (5000 parcels)
+2025-08-20 16:04:36 - src.zonal_processor - INFO - [Chunk 20] Processing 5000 parcels
+2025-08-20 16:04:36 - src.zonal_processor - INFO - [Chunk 20] Loaded raster window: (2162, 2887)
+2025-08-20 16:04:36 - src.zonal_processor - INFO - [Chunk 20] Calculating zonal statistics
+2025-08-20 16:04:40 - src.zonal_processor - INFO - [Chunk 20] Processed 5000 parcels in 3.91s (1279.2 parcels/s)
+2025-08-20 16:04:40 - __main__ - INFO - Progress: 105000/1077684 parcels processed
+2025-08-20 16:04:40 - __main__ - INFO - Processing chunk 21 (5000 parcels)
+2025-08-20 16:04:40 - src.zonal_processor - INFO - [Chunk 21] Processing 5000 parcels
+2025-08-20 16:04:40 - src.zonal_processor - INFO - [Chunk 21] Loaded raster window: (2560, 2867)
+2025-08-20 16:04:40 - src.zonal_processor - INFO - [Chunk 21] Calculating zonal statistics
+2025-08-20 16:04:44 - src.zonal_processor - INFO - [Chunk 21] Processed 5000 parcels in 3.88s (1288.7 parcels/s)
+2025-08-20 16:04:44 - __main__ - INFO - Processing chunk 22 (5000 parcels)
+2025-08-20 16:04:44 - src.zonal_processor - INFO - [Chunk 22] Processing 5000 parcels
+2025-08-20 16:04:44 - src.zonal_processor - INFO - [Chunk 22] Loaded raster window: (2539, 2881)
+2025-08-20 16:04:44 - src.zonal_processor - INFO - [Chunk 22] Calculating zonal statistics
+2025-08-20 16:04:48 - src.zonal_processor - INFO - [Chunk 22] Processed 5000 parcels in 3.72s (1343.5 parcels/s)
+2025-08-20 16:04:48 - __main__ - INFO - Processing chunk 23 (5000 parcels)
+2025-08-20 16:04:48 - src.zonal_processor - INFO - [Chunk 23] Processing 5000 parcels
+2025-08-20 16:04:48 - src.zonal_processor - INFO - [Chunk 23] Loaded raster window: (2152, 2894)
+2025-08-20 16:04:48 - src.zonal_processor - INFO - [Chunk 23] Calculating zonal statistics
+2025-08-20 16:04:51 - src.zonal_processor - INFO - [Chunk 23] Processed 5000 parcels in 3.73s (1339.6 parcels/s)
+2025-08-20 16:04:51 - __main__ - INFO - Processing chunk 24 (5000 parcels)
+2025-08-20 16:04:51 - src.zonal_processor - INFO - [Chunk 24] Processing 5000 parcels
+2025-08-20 16:04:52 - src.zonal_processor - INFO - [Chunk 24] Loaded raster window: (2322, 2888)
+2025-08-20 16:04:52 - src.zonal_processor - INFO - [Chunk 24] Calculating zonal statistics
+2025-08-20 16:04:55 - src.zonal_processor - INFO - [Chunk 24] Processed 5000 parcels in 3.77s (1325.4 parcels/s)
+2025-08-20 16:04:55 - __main__ - INFO - Processing chunk 25 (5000 parcels)
+2025-08-20 16:04:55 - src.zonal_processor - INFO - [Chunk 25] Processing 5000 parcels
+2025-08-20 16:04:55 - src.zonal_processor - INFO - [Chunk 25] Loaded raster window: (2674, 2885)
+2025-08-20 16:04:55 - src.zonal_processor - INFO - [Chunk 25] Calculating zonal statistics
+2025-08-20 16:04:59 - src.zonal_processor - INFO - [Chunk 25] Processed 5000 parcels in 3.81s (1312.6 parcels/s)
+2025-08-20 16:04:59 - __main__ - INFO - Processing chunk 26 (5000 parcels)
+2025-08-20 16:04:59 - src.zonal_processor - INFO - [Chunk 26] Processing 5000 parcels
+2025-08-20 16:04:59 - src.zonal_processor - INFO - [Chunk 26] Loaded raster window: (2590, 2894)
+2025-08-20 16:04:59 - src.zonal_processor - INFO - [Chunk 26] Calculating zonal statistics
+2025-08-20 16:05:03 - src.zonal_processor - INFO - [Chunk 26] Processed 5000 parcels in 3.80s (1317.3 parcels/s)
+2025-08-20 16:05:03 - __main__ - INFO - Processing chunk 27 (5000 parcels)
+2025-08-20 16:05:03 - src.zonal_processor - INFO - [Chunk 27] Processing 5000 parcels
+2025-08-20 16:05:03 - src.zonal_processor - INFO - [Chunk 27] Loaded raster window: (6139, 5247)
+2025-08-20 16:05:03 - src.zonal_processor - INFO - [Chunk 27] Calculating zonal statistics
+2025-08-20 16:05:07 - src.zonal_processor - INFO - [Chunk 27] Processed 5000 parcels in 4.16s (1203.0 parcels/s)
+2025-08-20 16:05:07 - __main__ - INFO - Processing chunk 28 (5000 parcels)
+2025-08-20 16:05:07 - src.zonal_processor - INFO - [Chunk 28] Processing 5000 parcels
+2025-08-20 16:05:07 - src.zonal_processor - INFO - [Chunk 28] Loaded raster window: (2004, 1876)
+2025-08-20 16:05:07 - src.zonal_processor - INFO - [Chunk 28] Calculating zonal statistics
+2025-08-20 16:05:11 - src.zonal_processor - INFO - [Chunk 28] Processed 5000 parcels in 3.99s (1253.8 parcels/s)
+2025-08-20 16:05:11 - __main__ - INFO - Processing chunk 29 (5000 parcels)
+2025-08-20 16:05:11 - src.zonal_processor - INFO - [Chunk 29] Processing 5000 parcels
+2025-08-20 16:05:11 - src.zonal_processor - INFO - [Chunk 29] Loaded raster window: (2177, 1872)
+2025-08-20 16:05:11 - src.zonal_processor - INFO - [Chunk 29] Calculating zonal statistics
+2025-08-20 16:05:15 - src.zonal_processor - INFO - [Chunk 29] Processed 5000 parcels in 3.89s (1285.6 parcels/s)
+2025-08-20 16:05:15 - __main__ - INFO - Processing chunk 30 (5000 parcels)
+2025-08-20 16:05:15 - src.zonal_processor - INFO - [Chunk 30] Processing 5000 parcels
+2025-08-20 16:05:15 - src.zonal_processor - INFO - [Chunk 30] Loaded raster window: (2238, 1878)
+2025-08-20 16:05:15 - src.zonal_processor - INFO - [Chunk 30] Calculating zonal statistics
+2025-08-20 16:05:19 - src.zonal_processor - INFO - [Chunk 30] Processed 5000 parcels in 3.90s (1280.4 parcels/s)
+2025-08-20 16:05:19 - __main__ - INFO - Progress: 155000/1077684 parcels processed
+2025-08-20 16:05:19 - __main__ - INFO - Processing chunk 31 (5000 parcels)
+2025-08-20 16:05:19 - src.zonal_processor - INFO - [Chunk 31] Processing 5000 parcels
+2025-08-20 16:05:19 - src.zonal_processor - INFO - [Chunk 31] Loaded raster window: (2510, 3002)
+2025-08-20 16:05:19 - src.zonal_processor - INFO - [Chunk 31] Calculating zonal statistics
+2025-08-20 16:05:23 - src.zonal_processor - INFO - [Chunk 31] Processed 5000 parcels in 4.13s (1211.3 parcels/s)
+2025-08-20 16:05:23 - __main__ - INFO - Processing chunk 32 (5000 parcels)
+2025-08-20 16:05:23 - src.zonal_processor - INFO - [Chunk 32] Processing 5000 parcels
+2025-08-20 16:05:23 - src.zonal_processor - INFO - [Chunk 32] Loaded raster window: (1884, 1526)
+2025-08-20 16:05:23 - src.zonal_processor - INFO - [Chunk 32] Calculating zonal statistics
+2025-08-20 16:05:27 - src.zonal_processor - INFO - [Chunk 32] Processed 5000 parcels in 3.89s (1284.3 parcels/s)
+2025-08-20 16:05:27 - __main__ - INFO - Processing chunk 33 (5000 parcels)
+2025-08-20 16:05:27 - src.zonal_processor - INFO - [Chunk 33] Processing 5000 parcels
+2025-08-20 16:05:27 - src.zonal_processor - INFO - [Chunk 33] Loaded raster window: (1882, 1527)
+2025-08-20 16:05:27 - src.zonal_processor - INFO - [Chunk 33] Calculating zonal statistics
+2025-08-20 16:05:31 - src.zonal_processor - INFO - [Chunk 33] Processed 5000 parcels in 3.89s (1285.6 parcels/s)
+2025-08-20 16:05:31 - __main__ - INFO - Processing chunk 34 (5000 parcels)
+2025-08-20 16:05:31 - src.zonal_processor - INFO - [Chunk 34] Processing 5000 parcels
+2025-08-20 16:05:31 - src.zonal_processor - INFO - [Chunk 34] Loaded raster window: (1883, 1525)
+2025-08-20 16:05:31 - src.zonal_processor - INFO - [Chunk 34] Calculating zonal statistics
+2025-08-20 16:05:35 - src.zonal_processor - INFO - [Chunk 34] Processed 5000 parcels in 4.13s (1211.9 parcels/s)
+2025-08-20 16:05:35 - __main__ - INFO - Processing chunk 35 (5000 parcels)
+2025-08-20 16:05:35 - src.zonal_processor - INFO - [Chunk 35] Processing 5000 parcels
+2025-08-20 16:05:35 - src.zonal_processor - INFO - [Chunk 35] Loaded raster window: (11324, 7374)
+2025-08-20 16:05:35 - src.zonal_processor - INFO - [Chunk 35] Calculating zonal statistics
+2025-08-20 16:05:39 - src.zonal_processor - INFO - [Chunk 35] Processed 5000 parcels in 4.23s (1181.7 parcels/s)
+2025-08-20 16:05:39 - __main__ - INFO - Processing chunk 36 (5000 parcels)
+2025-08-20 16:05:39 - src.zonal_processor - INFO - [Chunk 36] Processing 5000 parcels
+2025-08-20 16:05:39 - src.zonal_processor - INFO - [Chunk 36] Loaded raster window: (3422, 2261)
+2025-08-20 16:05:39 - src.zonal_processor - INFO - [Chunk 36] Calculating zonal statistics
+2025-08-20 16:05:43 - src.zonal_processor - INFO - [Chunk 36] Processed 5000 parcels in 3.81s (1312.3 parcels/s)
+2025-08-20 16:05:43 - __main__ - INFO - Processing chunk 37 (5000 parcels)
+2025-08-20 16:05:43 - src.zonal_processor - INFO - [Chunk 37] Processing 5000 parcels
+2025-08-20 16:05:43 - src.zonal_processor - INFO - [Chunk 37] Loaded raster window: (3345, 2346)
+2025-08-20 16:05:43 - src.zonal_processor - INFO - [Chunk 37] Calculating zonal statistics
+2025-08-20 16:05:47 - src.zonal_processor - INFO - [Chunk 37] Processed 5000 parcels in 3.87s (1290.8 parcels/s)
+2025-08-20 16:05:47 - __main__ - INFO - Processing chunk 38 (5000 parcels)
+2025-08-20 16:05:47 - src.zonal_processor - INFO - [Chunk 38] Processing 5000 parcels
+2025-08-20 16:05:47 - src.zonal_processor - INFO - [Chunk 38] Loaded raster window: (3405, 2249)
+2025-08-20 16:05:47 - src.zonal_processor - INFO - [Chunk 38] Calculating zonal statistics
+2025-08-20 16:05:51 - src.zonal_processor - INFO - [Chunk 38] Processed 5000 parcels in 3.87s (1293.0 parcels/s)
+2025-08-20 16:05:51 - __main__ - INFO - Processing chunk 39 (5000 parcels)
+2025-08-20 16:05:51 - src.zonal_processor - INFO - [Chunk 39] Processing 5000 parcels
+2025-08-20 16:05:51 - src.zonal_processor - INFO - [Chunk 39] Loaded raster window: (3423, 2245)
+2025-08-20 16:05:51 - src.zonal_processor - INFO - [Chunk 39] Calculating zonal statistics
+2025-08-20 16:05:55 - src.zonal_processor - INFO - [Chunk 39] Processed 5000 parcels in 3.91s (1279.4 parcels/s)
+2025-08-20 16:05:55 - __main__ - INFO - Processing chunk 40 (5000 parcels)
+2025-08-20 16:05:55 - src.zonal_processor - INFO - [Chunk 40] Processing 5000 parcels
+2025-08-20 16:05:55 - src.zonal_processor - INFO - [Chunk 40] Loaded raster window: (3381, 2272)
+2025-08-20 16:05:55 - src.zonal_processor - INFO - [Chunk 40] Calculating zonal statistics
+2025-08-20 16:05:59 - src.zonal_processor - INFO - [Chunk 40] Processed 5000 parcels in 3.84s (1302.6 parcels/s)
+2025-08-20 16:05:59 - __main__ - INFO - Progress: 205000/1077684 parcels processed
+2025-08-20 16:05:59 - __main__ - INFO - Processing chunk 41 (5000 parcels)
+2025-08-20 16:05:59 - src.zonal_processor - INFO - [Chunk 41] Processing 5000 parcels
+2025-08-20 16:05:59 - src.zonal_processor - INFO - [Chunk 41] Loaded raster window: (4358, 13601)
+2025-08-20 16:05:59 - src.zonal_processor - INFO - [Chunk 41] Calculating zonal statistics
+2025-08-20 16:06:03 - src.zonal_processor - INFO - [Chunk 41] Processed 5000 parcels in 4.14s (1208.4 parcels/s)
+2025-08-20 16:06:03 - __main__ - INFO - Processing chunk 42 (5000 parcels)
+2025-08-20 16:06:03 - src.zonal_processor - INFO - [Chunk 42] Processing 5000 parcels
+2025-08-20 16:06:03 - src.zonal_processor - INFO - [Chunk 42] Loaded raster window: (3761, 3848)
+2025-08-20 16:06:03 - src.zonal_processor - INFO - [Chunk 42] Calculating zonal statistics
+2025-08-20 16:06:07 - src.zonal_processor - INFO - [Chunk 42] Processed 5000 parcels in 3.94s (1270.0 parcels/s)
+2025-08-20 16:06:07 - __main__ - INFO - Processing chunk 43 (5000 parcels)
+2025-08-20 16:06:07 - src.zonal_processor - INFO - [Chunk 43] Processing 5000 parcels
+2025-08-20 16:06:07 - src.zonal_processor - INFO - [Chunk 43] Loaded raster window: (3746, 3793)
+2025-08-20 16:06:07 - src.zonal_processor - INFO - [Chunk 43] Calculating zonal statistics
+2025-08-20 16:06:11 - src.zonal_processor - INFO - [Chunk 43] Processed 5000 parcels in 3.94s (1270.3 parcels/s)
+2025-08-20 16:06:11 - __main__ - INFO - Processing chunk 44 (5000 parcels)
+2025-08-20 16:06:11 - src.zonal_processor - INFO - [Chunk 44] Processing 5000 parcels
+2025-08-20 16:06:11 - src.zonal_processor - INFO - [Chunk 44] Loaded raster window: (6894, 14289)
+2025-08-20 16:06:11 - src.zonal_processor - INFO - [Chunk 44] Calculating zonal statistics
+2025-08-20 16:06:15 - src.zonal_processor - INFO - [Chunk 44] Processed 5000 parcels in 4.34s (1152.9 parcels/s)
+2025-08-20 16:06:15 - __main__ - INFO - Processing chunk 45 (5000 parcels)
+2025-08-20 16:06:15 - src.zonal_processor - INFO - [Chunk 45] Processing 5000 parcels
+2025-08-20 16:06:15 - src.zonal_processor - INFO - [Chunk 45] Loaded raster window: (3790, 2168)
+2025-08-20 16:06:15 - src.zonal_processor - INFO - [Chunk 45] Calculating zonal statistics
+2025-08-20 16:06:19 - src.zonal_processor - INFO - [Chunk 45] Processed 5000 parcels in 3.90s (1283.5 parcels/s)
+2025-08-20 16:06:19 - __main__ - INFO - Processing chunk 46 (5000 parcels)
+2025-08-20 16:06:19 - src.zonal_processor - INFO - [Chunk 46] Processing 5000 parcels
+2025-08-20 16:06:19 - src.zonal_processor - INFO - [Chunk 46] Loaded raster window: (3770, 2141)
+2025-08-20 16:06:19 - src.zonal_processor - INFO - [Chunk 46] Calculating zonal statistics
+2025-08-20 16:06:23 - src.zonal_processor - INFO - [Chunk 46] Processed 5000 parcels in 3.98s (1254.9 parcels/s)
+2025-08-20 16:06:23 - __main__ - INFO - Processing chunk 47 (5000 parcels)
+2025-08-20 16:06:23 - src.zonal_processor - INFO - [Chunk 47] Processing 5000 parcels
+2025-08-20 16:06:23 - src.zonal_processor - INFO - [Chunk 47] Loaded raster window: (3909, 2410)
+2025-08-20 16:06:23 - src.zonal_processor - INFO - [Chunk 47] Calculating zonal statistics
+2025-08-20 16:06:27 - src.zonal_processor - INFO - [Chunk 47] Processed 5000 parcels in 4.05s (1233.5 parcels/s)
+2025-08-20 16:06:27 - __main__ - INFO - Processing chunk 48 (5000 parcels)
+2025-08-20 16:06:27 - src.zonal_processor - INFO - [Chunk 48] Processing 5000 parcels
+2025-08-20 16:06:27 - src.zonal_processor - INFO - [Chunk 48] Loaded raster window: (6606, 13123)
+2025-08-20 16:06:27 - src.zonal_processor - INFO - [Chunk 48] Calculating zonal statistics
+2025-08-20 16:06:31 - src.zonal_processor - INFO - [Chunk 48] Processed 5000 parcels in 4.16s (1202.0 parcels/s)
+2025-08-20 16:06:31 - __main__ - INFO - Processing chunk 49 (5000 parcels)
+2025-08-20 16:06:31 - src.zonal_processor - INFO - [Chunk 49] Processing 5000 parcels
+2025-08-20 16:06:31 - src.zonal_processor - INFO - [Chunk 49] Loaded raster window: (3712, 5513)
+2025-08-20 16:06:31 - src.zonal_processor - INFO - [Chunk 49] Calculating zonal statistics
+2025-08-20 16:06:35 - src.zonal_processor - INFO - [Chunk 49] Processed 5000 parcels in 3.89s (1286.9 parcels/s)
+2025-08-20 16:06:35 - __main__ - INFO - Processing chunk 50 (5000 parcels)
+2025-08-20 16:06:35 - src.zonal_processor - INFO - [Chunk 50] Processing 5000 parcels
+2025-08-20 16:06:35 - src.zonal_processor - INFO - [Chunk 50] Loaded raster window: (3836, 5272)
+2025-08-20 16:06:35 - src.zonal_processor - INFO - [Chunk 50] Calculating zonal statistics
+2025-08-20 16:06:39 - src.zonal_processor - INFO - [Chunk 50] Processed 5000 parcels in 3.82s (1309.9 parcels/s)
+2025-08-20 16:06:39 - __main__ - INFO - Progress: 255000/1077684 parcels processed
+2025-08-20 16:06:39 - __main__ - INFO - Processing chunk 51 (5000 parcels)
+2025-08-20 16:06:39 - src.zonal_processor - INFO - [Chunk 51] Processing 5000 parcels
+2025-08-20 16:06:39 - src.zonal_processor - INFO - [Chunk 51] Loaded raster window: (4007, 5162)
+2025-08-20 16:06:39 - src.zonal_processor - INFO - [Chunk 51] Calculating zonal statistics
+2025-08-20 16:06:43 - src.zonal_processor - INFO - [Chunk 51] Processed 5000 parcels in 3.81s (1312.8 parcels/s)
+2025-08-20 16:06:43 - __main__ - INFO - Processing chunk 52 (5000 parcels)
+2025-08-20 16:06:43 - src.zonal_processor - INFO - [Chunk 52] Processing 5000 parcels
+2025-08-20 16:06:43 - src.zonal_processor - INFO - [Chunk 52] Loaded raster window: (3851, 4627)
+2025-08-20 16:06:43 - src.zonal_processor - INFO - [Chunk 52] Calculating zonal statistics
+2025-08-20 16:06:46 - src.zonal_processor - INFO - [Chunk 52] Processed 5000 parcels in 3.78s (1323.9 parcels/s)
+2025-08-20 16:06:46 - __main__ - INFO - Processing chunk 53 (5000 parcels)
+2025-08-20 16:06:46 - src.zonal_processor - INFO - [Chunk 53] Processing 5000 parcels
+2025-08-20 16:06:47 - src.zonal_processor - INFO - [Chunk 53] Loaded raster window: (3898, 4363)
+2025-08-20 16:06:47 - src.zonal_processor - INFO - [Chunk 53] Calculating zonal statistics
+2025-08-20 16:06:50 - src.zonal_processor - INFO - [Chunk 53] Processed 5000 parcels in 4.00s (1249.1 parcels/s)
+2025-08-20 16:06:50 - __main__ - INFO - Processing chunk 54 (5000 parcels)
+2025-08-20 16:06:50 - src.zonal_processor - INFO - [Chunk 54] Processing 5000 parcels
+2025-08-20 16:06:51 - src.zonal_processor - INFO - [Chunk 54] Loaded raster window: (3866, 4968)
+2025-08-20 16:06:51 - src.zonal_processor - INFO - [Chunk 54] Calculating zonal statistics
+2025-08-20 16:06:54 - src.zonal_processor - INFO - [Chunk 54] Processed 5000 parcels in 3.70s (1352.4 parcels/s)
+2025-08-20 16:06:54 - __main__ - INFO - Processing chunk 55 (5000 parcels)
+2025-08-20 16:06:54 - src.zonal_processor - INFO - [Chunk 55] Processing 5000 parcels
+2025-08-20 16:06:54 - src.zonal_processor - INFO - [Chunk 55] Loaded raster window: (3894, 5092)
+2025-08-20 16:06:54 - src.zonal_processor - INFO - [Chunk 55] Calculating zonal statistics
+2025-08-20 16:06:58 - src.zonal_processor - INFO - [Chunk 55] Processed 5000 parcels in 3.88s (1288.3 parcels/s)
+2025-08-20 16:06:58 - __main__ - INFO - Processing chunk 56 (5000 parcels)
+2025-08-20 16:06:58 - src.zonal_processor - INFO - [Chunk 56] Processing 5000 parcels
+2025-08-20 16:06:58 - src.zonal_processor - INFO - [Chunk 56] Loaded raster window: (3795, 4709)
+2025-08-20 16:06:58 - src.zonal_processor - INFO - [Chunk 56] Calculating zonal statistics
+2025-08-20 16:07:02 - src.zonal_processor - INFO - [Chunk 56] Processed 5000 parcels in 3.83s (1306.5 parcels/s)
+2025-08-20 16:07:02 - __main__ - INFO - Processing chunk 57 (5000 parcels)
+2025-08-20 16:07:02 - src.zonal_processor - INFO - [Chunk 57] Processing 5000 parcels
+2025-08-20 16:07:02 - src.zonal_processor - INFO - [Chunk 57] Loaded raster window: (3690, 4458)
+2025-08-20 16:07:02 - src.zonal_processor - INFO - [Chunk 57] Calculating zonal statistics
+2025-08-20 16:07:06 - src.zonal_processor - INFO - [Chunk 57] Processed 5000 parcels in 3.85s (1297.3 parcels/s)
+2025-08-20 16:07:06 - __main__ - INFO - Processing chunk 58 (5000 parcels)
+2025-08-20 16:07:06 - src.zonal_processor - INFO - [Chunk 58] Processing 5000 parcels
+2025-08-20 16:07:06 - src.zonal_processor - INFO - [Chunk 58] Loaded raster window: (3848, 5305)
+2025-08-20 16:07:06 - src.zonal_processor - INFO - [Chunk 58] Calculating zonal statistics
+2025-08-20 16:07:09 - src.zonal_processor - INFO - [Chunk 58] Processed 5000 parcels in 3.72s (1343.0 parcels/s)
+2025-08-20 16:07:09 - __main__ - INFO - Processing chunk 59 (5000 parcels)
+2025-08-20 16:07:09 - src.zonal_processor - INFO - [Chunk 59] Processing 5000 parcels
+2025-08-20 16:07:10 - src.zonal_processor - INFO - [Chunk 59] Loaded raster window: (3970, 4727)
+2025-08-20 16:07:10 - src.zonal_processor - INFO - [Chunk 59] Calculating zonal statistics
+2025-08-20 16:07:13 - src.zonal_processor - INFO - [Chunk 59] Processed 5000 parcels in 3.79s (1318.1 parcels/s)
+2025-08-20 16:07:13 - __main__ - INFO - Processing chunk 60 (5000 parcels)
+2025-08-20 16:07:13 - src.zonal_processor - INFO - [Chunk 60] Processing 5000 parcels
+2025-08-20 16:07:14 - src.zonal_processor - INFO - [Chunk 60] Loaded raster window: (4820, 11111)
+2025-08-20 16:07:14 - src.zonal_processor - INFO - [Chunk 60] Calculating zonal statistics
+2025-08-20 16:07:17 - src.zonal_processor - INFO - [Chunk 60] Processed 5000 parcels in 4.00s (1248.9 parcels/s)
+2025-08-20 16:07:17 - __main__ - INFO - Progress: 305000/1077684 parcels processed
+2025-08-20 16:07:17 - __main__ - INFO - Processing chunk 61 (5000 parcels)
+2025-08-20 16:07:17 - src.zonal_processor - INFO - [Chunk 61] Processing 5000 parcels
+2025-08-20 16:07:17 - src.zonal_processor - INFO - [Chunk 61] Loaded raster window: (4800, 5249)
+2025-08-20 16:07:17 - src.zonal_processor - INFO - [Chunk 61] Calculating zonal statistics
+2025-08-20 16:07:21 - src.zonal_processor - INFO - [Chunk 61] Processed 5000 parcels in 3.90s (1281.8 parcels/s)
+2025-08-20 16:07:21 - __main__ - INFO - Processing chunk 62 (5000 parcels)
+2025-08-20 16:07:21 - src.zonal_processor - INFO - [Chunk 62] Processing 5000 parcels
+2025-08-20 16:07:21 - src.zonal_processor - INFO - [Chunk 62] Loaded raster window: (4917, 5316)
+2025-08-20 16:07:21 - src.zonal_processor - INFO - [Chunk 62] Calculating zonal statistics
+2025-08-20 16:07:25 - src.zonal_processor - INFO - [Chunk 62] Processed 5000 parcels in 3.82s (1309.5 parcels/s)
+2025-08-20 16:07:25 - __main__ - INFO - Processing chunk 63 (5000 parcels)
+2025-08-20 16:07:25 - src.zonal_processor - INFO - [Chunk 63] Processing 5000 parcels
+2025-08-20 16:07:25 - src.zonal_processor - INFO - [Chunk 63] Loaded raster window: (4862, 4917)
+2025-08-20 16:07:25 - src.zonal_processor - INFO - [Chunk 63] Calculating zonal statistics
+2025-08-20 16:07:29 - src.zonal_processor - INFO - [Chunk 63] Processed 5000 parcels in 3.81s (1310.7 parcels/s)
+2025-08-20 16:07:29 - __main__ - INFO - Processing chunk 64 (5000 parcels)
+2025-08-20 16:07:29 - src.zonal_processor - INFO - [Chunk 64] Processing 5000 parcels
+2025-08-20 16:07:29 - src.zonal_processor - INFO - [Chunk 64] Loaded raster window: (4904, 4659)
+2025-08-20 16:07:29 - src.zonal_processor - INFO - [Chunk 64] Calculating zonal statistics
+2025-08-20 16:07:33 - src.zonal_processor - INFO - [Chunk 64] Processed 5000 parcels in 3.91s (1279.1 parcels/s)
+2025-08-20 16:07:33 - __main__ - INFO - Processing chunk 65 (5000 parcels)
+2025-08-20 16:07:33 - src.zonal_processor - INFO - [Chunk 65] Processing 5000 parcels
+2025-08-20 16:07:33 - src.zonal_processor - INFO - [Chunk 65] Loaded raster window: (4928, 5242)
+2025-08-20 16:07:33 - src.zonal_processor - INFO - [Chunk 65] Calculating zonal statistics
+2025-08-20 16:07:37 - src.zonal_processor - INFO - [Chunk 65] Processed 5000 parcels in 3.93s (1270.9 parcels/s)
+2025-08-20 16:07:37 - __main__ - INFO - Processing chunk 66 (5000 parcels)
+2025-08-20 16:07:37 - src.zonal_processor - INFO - [Chunk 66] Processing 5000 parcels
+2025-08-20 16:07:37 - src.zonal_processor - INFO - [Chunk 66] Loaded raster window: (4859, 5377)
+2025-08-20 16:07:37 - src.zonal_processor - INFO - [Chunk 66] Calculating zonal statistics
+2025-08-20 16:07:41 - src.zonal_processor - INFO - [Chunk 66] Processed 5000 parcels in 4.15s (1204.1 parcels/s)
+2025-08-20 16:07:41 - __main__ - INFO - Processing chunk 67 (5000 parcels)
+2025-08-20 16:07:41 - src.zonal_processor - INFO - [Chunk 67] Processing 5000 parcels
+2025-08-20 16:07:41 - src.zonal_processor - INFO - [Chunk 67] Loaded raster window: (4832, 5051)
+2025-08-20 16:07:41 - src.zonal_processor - INFO - [Chunk 67] Calculating zonal statistics
+2025-08-20 16:07:45 - src.zonal_processor - INFO - [Chunk 67] Processed 5000 parcels in 3.88s (1287.1 parcels/s)
+2025-08-20 16:07:45 - __main__ - INFO - Processing chunk 68 (5000 parcels)
+2025-08-20 16:07:45 - src.zonal_processor - INFO - [Chunk 68] Processing 5000 parcels
+2025-08-20 16:07:45 - src.zonal_processor - INFO - [Chunk 68] Loaded raster window: (4880, 5222)
+2025-08-20 16:07:45 - src.zonal_processor - INFO - [Chunk 68] Calculating zonal statistics
+2025-08-20 16:07:49 - src.zonal_processor - INFO - [Chunk 68] Processed 5000 parcels in 3.93s (1271.1 parcels/s)
+2025-08-20 16:07:49 - __main__ - INFO - Processing chunk 69 (5000 parcels)
+2025-08-20 16:07:49 - src.zonal_processor - INFO - [Chunk 69] Processing 5000 parcels
+2025-08-20 16:07:49 - src.zonal_processor - INFO - [Chunk 69] Loaded raster window: (4880, 3884)
+2025-08-20 16:07:49 - src.zonal_processor - INFO - [Chunk 69] Calculating zonal statistics
+2025-08-20 16:07:53 - src.zonal_processor - INFO - [Chunk 69] Processed 5000 parcels in 3.92s (1276.6 parcels/s)
+2025-08-20 16:07:53 - __main__ - INFO - Processing chunk 70 (5000 parcels)
+2025-08-20 16:07:53 - src.zonal_processor - INFO - [Chunk 70] Processing 5000 parcels
+2025-08-20 16:07:53 - src.zonal_processor - INFO - [Chunk 70] Loaded raster window: (4819, 4919)
+2025-08-20 16:07:53 - src.zonal_processor - INFO - [Chunk 70] Calculating zonal statistics
+2025-08-20 16:07:57 - src.zonal_processor - INFO - [Chunk 70] Processed 5000 parcels in 4.05s (1236.0 parcels/s)
+2025-08-20 16:07:57 - __main__ - INFO - Progress: 355000/1077684 parcels processed
+2025-08-20 16:07:57 - __main__ - INFO - Processing chunk 71 (5000 parcels)
+2025-08-20 16:07:57 - src.zonal_processor - INFO - [Chunk 71] Processing 5000 parcels
+2025-08-20 16:07:57 - src.zonal_processor - INFO - [Chunk 71] Loaded raster window: (9030, 12821)
+2025-08-20 16:07:57 - src.zonal_processor - INFO - [Chunk 71] Calculating zonal statistics
+2025-08-20 16:08:02 - src.zonal_processor - INFO - [Chunk 71] Processed 5000 parcels in 5.05s (989.7 parcels/s)
+2025-08-20 16:08:02 - __main__ - INFO - Processing chunk 72 (5000 parcels)
+2025-08-20 16:08:02 - src.zonal_processor - INFO - [Chunk 72] Processing 5000 parcels
+2025-08-20 16:08:02 - src.zonal_processor - INFO - [Chunk 72] Loaded raster window: (7605, 5664)
+2025-08-20 16:08:02 - src.zonal_processor - INFO - [Chunk 72] Calculating zonal statistics
+2025-08-20 16:08:07 - src.zonal_processor - INFO - [Chunk 72] Processed 5000 parcels in 4.74s (1054.3 parcels/s)
+2025-08-20 16:08:07 - __main__ - INFO - Processing chunk 73 (5000 parcels)
+2025-08-20 16:08:07 - src.zonal_processor - INFO - [Chunk 73] Processing 5000 parcels
+2025-08-20 16:08:07 - src.zonal_processor - INFO - [Chunk 73] Loaded raster window: (11774, 6320)
+2025-08-20 16:08:07 - src.zonal_processor - INFO - [Chunk 73] Calculating zonal statistics
+2025-08-20 16:08:11 - src.zonal_processor - INFO - [Chunk 73] Processed 5000 parcels in 4.77s (1049.2 parcels/s)
+2025-08-20 16:08:11 - __main__ - INFO - Processing chunk 74 (5000 parcels)
+2025-08-20 16:08:11 - src.zonal_processor - INFO - [Chunk 74] Processing 5000 parcels
+2025-08-20 16:08:12 - src.zonal_processor - INFO - [Chunk 74] Loaded raster window: (8096, 5635)
+2025-08-20 16:08:12 - src.zonal_processor - INFO - [Chunk 74] Calculating zonal statistics
+2025-08-20 16:08:16 - src.zonal_processor - INFO - [Chunk 74] Processed 5000 parcels in 4.37s (1144.8 parcels/s)
+2025-08-20 16:08:16 - __main__ - INFO - Processing chunk 75 (5000 parcels)
+2025-08-20 16:08:16 - src.zonal_processor - INFO - [Chunk 75] Processing 5000 parcels
+2025-08-20 16:08:16 - src.zonal_processor - INFO - [Chunk 75] Loaded raster window: (15656, 7850)
+2025-08-20 16:08:16 - src.zonal_processor - INFO - [Chunk 75] Calculating zonal statistics
+2025-08-20 16:08:20 - src.zonal_processor - INFO - [Chunk 75] Processed 5000 parcels in 4.57s (1094.0 parcels/s)
+2025-08-20 16:08:20 - __main__ - INFO - Processing chunk 76 (5000 parcels)
+2025-08-20 16:08:20 - src.zonal_processor - INFO - [Chunk 76] Processing 5000 parcels
+2025-08-20 16:08:20 - src.zonal_processor - INFO - [Chunk 76] Loaded raster window: (1501, 1324)
+2025-08-20 16:08:20 - src.zonal_processor - INFO - [Chunk 76] Calculating zonal statistics
+2025-08-20 16:08:24 - src.zonal_processor - INFO - [Chunk 76] Processed 5000 parcels in 3.85s (1300.2 parcels/s)
+2025-08-20 16:08:24 - __main__ - INFO - Processing chunk 77 (5000 parcels)
+2025-08-20 16:08:24 - src.zonal_processor - INFO - [Chunk 77] Processing 5000 parcels
+2025-08-20 16:08:25 - src.zonal_processor - INFO - [Chunk 77] Loaded raster window: (12799, 8277)
+2025-08-20 16:08:25 - src.zonal_processor - INFO - [Chunk 77] Calculating zonal statistics
+2025-08-20 16:08:28 - src.zonal_processor - INFO - [Chunk 77] Processed 5000 parcels in 4.28s (1168.1 parcels/s)
+2025-08-20 16:08:28 - __main__ - INFO - Processing chunk 78 (5000 parcels)
+2025-08-20 16:08:28 - src.zonal_processor - INFO - [Chunk 78] Processing 5000 parcels
+2025-08-20 16:08:28 - src.zonal_processor - INFO - [Chunk 78] Loaded raster window: (3363, 3035)
+2025-08-20 16:08:28 - src.zonal_processor - INFO - [Chunk 78] Calculating zonal statistics
+2025-08-20 16:08:32 - src.zonal_processor - INFO - [Chunk 78] Processed 5000 parcels in 3.87s (1293.3 parcels/s)
+2025-08-20 16:08:32 - __main__ - INFO - Processing chunk 79 (5000 parcels)
+2025-08-20 16:08:32 - src.zonal_processor - INFO - [Chunk 79] Processing 5000 parcels
+2025-08-20 16:08:32 - src.zonal_processor - INFO - [Chunk 79] Loaded raster window: (3533, 3077)
+2025-08-20 16:08:32 - src.zonal_processor - INFO - [Chunk 79] Calculating zonal statistics
+2025-08-20 16:08:36 - src.zonal_processor - INFO - [Chunk 79] Processed 5000 parcels in 3.67s (1363.5 parcels/s)
+2025-08-20 16:08:36 - __main__ - INFO - Processing chunk 80 (5000 parcels)
+2025-08-20 16:08:36 - src.zonal_processor - INFO - [Chunk 80] Processing 5000 parcels
+2025-08-20 16:08:36 - src.zonal_processor - INFO - [Chunk 80] Loaded raster window: (3320, 3014)
+2025-08-20 16:08:36 - src.zonal_processor - INFO - [Chunk 80] Calculating zonal statistics
+2025-08-20 16:08:40 - src.zonal_processor - INFO - [Chunk 80] Processed 5000 parcels in 3.83s (1306.4 parcels/s)
+2025-08-20 16:08:40 - __main__ - INFO - Progress: 405000/1077684 parcels processed
+2025-08-20 16:08:40 - __main__ - INFO - Processing chunk 81 (5000 parcels)
+2025-08-20 16:08:40 - src.zonal_processor - INFO - [Chunk 81] Processing 5000 parcels
+2025-08-20 16:08:40 - src.zonal_processor - INFO - [Chunk 81] Loaded raster window: (3320, 2922)
+2025-08-20 16:08:40 - src.zonal_processor - INFO - [Chunk 81] Calculating zonal statistics
+2025-08-20 16:08:44 - src.zonal_processor - INFO - [Chunk 81] Processed 5000 parcels in 3.83s (1305.0 parcels/s)
+2025-08-20 16:08:44 - __main__ - INFO - Processing chunk 82 (5000 parcels)
+2025-08-20 16:08:44 - src.zonal_processor - INFO - [Chunk 82] Processing 5000 parcels
+2025-08-20 16:08:44 - src.zonal_processor - INFO - [Chunk 82] Loaded raster window: (3572, 3479)
+2025-08-20 16:08:44 - src.zonal_processor - INFO - [Chunk 82] Calculating zonal statistics
+2025-08-20 16:08:48 - src.zonal_processor - INFO - [Chunk 82] Processed 5000 parcels in 3.84s (1301.7 parcels/s)
+2025-08-20 16:08:48 - __main__ - INFO - Processing chunk 83 (5000 parcels)
+2025-08-20 16:08:48 - src.zonal_processor - INFO - [Chunk 83] Processing 5000 parcels
+2025-08-20 16:08:48 - src.zonal_processor - INFO - [Chunk 83] Loaded raster window: (3277, 3213)
+2025-08-20 16:08:48 - src.zonal_processor - INFO - [Chunk 83] Calculating zonal statistics
+2025-08-20 16:08:51 - src.zonal_processor - INFO - [Chunk 83] Processed 5000 parcels in 3.68s (1357.4 parcels/s)
+2025-08-20 16:08:51 - __main__ - INFO - Processing chunk 84 (5000 parcels)
+2025-08-20 16:08:51 - src.zonal_processor - INFO - [Chunk 84] Processing 5000 parcels
+2025-08-20 16:08:51 - src.zonal_processor - INFO - [Chunk 84] Loaded raster window: (3410, 2951)
+2025-08-20 16:08:51 - src.zonal_processor - INFO - [Chunk 84] Calculating zonal statistics
+2025-08-20 16:08:55 - src.zonal_processor - INFO - [Chunk 84] Processed 5000 parcels in 3.75s (1332.6 parcels/s)
+2025-08-20 16:08:55 - __main__ - INFO - Processing chunk 85 (5000 parcels)
+2025-08-20 16:08:55 - src.zonal_processor - INFO - [Chunk 85] Processing 5000 parcels
+2025-08-20 16:08:55 - src.zonal_processor - INFO - [Chunk 85] Loaded raster window: (3259, 2869)
+2025-08-20 16:08:55 - src.zonal_processor - INFO - [Chunk 85] Calculating zonal statistics
+2025-08-20 16:08:59 - src.zonal_processor - INFO - [Chunk 85] Processed 5000 parcels in 3.78s (1324.2 parcels/s)
+2025-08-20 16:08:59 - __main__ - INFO - Processing chunk 86 (5000 parcels)
+2025-08-20 16:08:59 - src.zonal_processor - INFO - [Chunk 86] Processing 5000 parcels
+2025-08-20 16:08:59 - src.zonal_processor - INFO - [Chunk 86] Loaded raster window: (3405, 3242)
+2025-08-20 16:08:59 - src.zonal_processor - INFO - [Chunk 86] Calculating zonal statistics
+2025-08-20 16:09:03 - src.zonal_processor - INFO - [Chunk 86] Processed 5000 parcels in 3.98s (1255.9 parcels/s)
+2025-08-20 16:09:03 - __main__ - INFO - Processing chunk 87 (5000 parcels)
+2025-08-20 16:09:03 - src.zonal_processor - INFO - [Chunk 87] Processing 5000 parcels
+2025-08-20 16:09:03 - src.zonal_processor - INFO - [Chunk 87] Loaded raster window: (3320, 2989)
+2025-08-20 16:09:03 - src.zonal_processor - INFO - [Chunk 87] Calculating zonal statistics
+2025-08-20 16:09:07 - src.zonal_processor - INFO - [Chunk 87] Processed 5000 parcels in 3.82s (1309.7 parcels/s)
+2025-08-20 16:09:07 - __main__ - INFO - Processing chunk 88 (5000 parcels)
+2025-08-20 16:09:07 - src.zonal_processor - INFO - [Chunk 88] Processing 5000 parcels
+2025-08-20 16:09:07 - src.zonal_processor - INFO - [Chunk 88] Loaded raster window: (3230, 2919)
+2025-08-20 16:09:07 - src.zonal_processor - INFO - [Chunk 88] Calculating zonal statistics
+2025-08-20 16:09:10 - src.zonal_processor - INFO - [Chunk 88] Processed 5000 parcels in 3.75s (1332.8 parcels/s)
+2025-08-20 16:09:10 - __main__ - INFO - Processing chunk 89 (5000 parcels)
+2025-08-20 16:09:10 - src.zonal_processor - INFO - [Chunk 89] Processing 5000 parcels
+2025-08-20 16:09:10 - src.zonal_processor - INFO - [Chunk 89] Loaded raster window: (3133, 2930)
+2025-08-20 16:09:10 - src.zonal_processor - INFO - [Chunk 89] Calculating zonal statistics
+2025-08-20 16:09:14 - src.zonal_processor - INFO - [Chunk 89] Processed 5000 parcels in 3.85s (1299.7 parcels/s)
+2025-08-20 16:09:14 - __main__ - INFO - Processing chunk 90 (5000 parcels)
+2025-08-20 16:09:14 - src.zonal_processor - INFO - [Chunk 90] Processing 5000 parcels
+2025-08-20 16:09:15 - src.zonal_processor - INFO - [Chunk 90] Loaded raster window: (9603, 9953)
+2025-08-20 16:09:15 - src.zonal_processor - INFO - [Chunk 90] Calculating zonal statistics
+2025-08-20 16:09:19 - src.zonal_processor - INFO - [Chunk 90] Processed 5000 parcels in 4.50s (1111.0 parcels/s)
+2025-08-20 16:09:19 - __main__ - INFO - Progress: 455000/1077684 parcels processed
+2025-08-20 16:09:19 - __main__ - INFO - Processing chunk 91 (5000 parcels)
+2025-08-20 16:09:19 - src.zonal_processor - INFO - [Chunk 91] Processing 5000 parcels
+2025-08-20 16:09:19 - src.zonal_processor - INFO - [Chunk 91] Loaded raster window: (2059, 4168)
+2025-08-20 16:09:19 - src.zonal_processor - INFO - [Chunk 91] Calculating zonal statistics
+2025-08-20 16:09:23 - src.zonal_processor - INFO - [Chunk 91] Processed 5000 parcels in 3.99s (1251.6 parcels/s)
+2025-08-20 16:09:23 - __main__ - INFO - Processing chunk 92 (5000 parcels)
+2025-08-20 16:09:23 - src.zonal_processor - INFO - [Chunk 92] Processing 5000 parcels
+2025-08-20 16:09:23 - src.zonal_processor - INFO - [Chunk 92] Loaded raster window: (8997, 11613)
+2025-08-20 16:09:23 - src.zonal_processor - INFO - [Chunk 92] Calculating zonal statistics
+2025-08-20 16:09:27 - src.zonal_processor - INFO - [Chunk 92] Processed 5000 parcels in 4.29s (1166.9 parcels/s)
+2025-08-20 16:09:27 - __main__ - INFO - Processing chunk 93 (5000 parcels)
+2025-08-20 16:09:27 - src.zonal_processor - INFO - [Chunk 93] Processing 5000 parcels
+2025-08-20 16:09:27 - src.zonal_processor - INFO - [Chunk 93] Loaded raster window: (3091, 2291)
+2025-08-20 16:09:27 - src.zonal_processor - INFO - [Chunk 93] Calculating zonal statistics
+2025-08-20 16:09:31 - src.zonal_processor - INFO - [Chunk 93] Processed 5000 parcels in 3.75s (1331.7 parcels/s)
+2025-08-20 16:09:31 - __main__ - INFO - Processing chunk 94 (5000 parcels)
+2025-08-20 16:09:31 - src.zonal_processor - INFO - [Chunk 94] Processing 5000 parcels
+2025-08-20 16:09:31 - src.zonal_processor - INFO - [Chunk 94] Loaded raster window: (2732, 2234)
+2025-08-20 16:09:31 - src.zonal_processor - INFO - [Chunk 94] Calculating zonal statistics
+2025-08-20 16:09:35 - src.zonal_processor - INFO - [Chunk 94] Processed 5000 parcels in 3.78s (1321.9 parcels/s)
+2025-08-20 16:09:35 - __main__ - INFO - Processing chunk 95 (5000 parcels)
+2025-08-20 16:09:35 - src.zonal_processor - INFO - [Chunk 95] Processing 5000 parcels
+2025-08-20 16:09:35 - src.zonal_processor - INFO - [Chunk 95] Loaded raster window: (2455, 2446)
+2025-08-20 16:09:35 - src.zonal_processor - INFO - [Chunk 95] Calculating zonal statistics
+2025-08-20 16:09:38 - src.zonal_processor - INFO - [Chunk 95] Processed 5000 parcels in 3.83s (1304.8 parcels/s)
+2025-08-20 16:09:38 - __main__ - INFO - Processing chunk 96 (5000 parcels)
+2025-08-20 16:09:38 - src.zonal_processor - INFO - [Chunk 96] Processing 5000 parcels
+2025-08-20 16:09:38 - src.zonal_processor - INFO - [Chunk 96] Loaded raster window: (2713, 2322)
+2025-08-20 16:09:38 - src.zonal_processor - INFO - [Chunk 96] Calculating zonal statistics
+2025-08-20 16:09:42 - src.zonal_processor - INFO - [Chunk 96] Processed 5000 parcels in 3.75s (1334.5 parcels/s)
+2025-08-20 16:09:42 - __main__ - INFO - Processing chunk 97 (5000 parcels)
+2025-08-20 16:09:42 - src.zonal_processor - INFO - [Chunk 97] Processing 5000 parcels
+2025-08-20 16:09:42 - src.zonal_processor - INFO - [Chunk 97] Loaded raster window: (2634, 2280)
+2025-08-20 16:09:42 - src.zonal_processor - INFO - [Chunk 97] Calculating zonal statistics
+2025-08-20 16:09:46 - src.zonal_processor - INFO - [Chunk 97] Processed 5000 parcels in 3.72s (1343.9 parcels/s)
+2025-08-20 16:09:46 - __main__ - INFO - Processing chunk 98 (5000 parcels)
+2025-08-20 16:09:46 - src.zonal_processor - INFO - [Chunk 98] Processing 5000 parcels
+2025-08-20 16:09:46 - src.zonal_processor - INFO - [Chunk 98] Loaded raster window: (2709, 2104)
+2025-08-20 16:09:46 - src.zonal_processor - INFO - [Chunk 98] Calculating zonal statistics
+2025-08-20 16:09:50 - src.zonal_processor - INFO - [Chunk 98] Processed 5000 parcels in 3.74s (1338.4 parcels/s)
+2025-08-20 16:09:50 - __main__ - INFO - Processing chunk 99 (5000 parcels)
+2025-08-20 16:09:50 - src.zonal_processor - INFO - [Chunk 99] Processing 5000 parcels
+2025-08-20 16:09:50 - src.zonal_processor - INFO - [Chunk 99] Loaded raster window: (6382, 8018)
+2025-08-20 16:09:50 - src.zonal_processor - INFO - [Chunk 99] Calculating zonal statistics
+2025-08-20 16:09:54 - src.zonal_processor - INFO - [Chunk 99] Processed 5000 parcels in 4.08s (1226.4 parcels/s)
+2025-08-20 16:09:54 - __main__ - INFO - Processing chunk 100 (5000 parcels)
+2025-08-20 16:09:54 - src.zonal_processor - INFO - [Chunk 100] Processing 5000 parcels
+2025-08-20 16:09:54 - src.zonal_processor - INFO - [Chunk 100] Loaded raster window: (6488, 4268)
+2025-08-20 16:09:54 - src.zonal_processor - INFO - [Chunk 100] Calculating zonal statistics
+2025-08-20 16:09:58 - src.zonal_processor - INFO - [Chunk 100] Processed 5000 parcels in 4.01s (1248.1 parcels/s)
+2025-08-20 16:09:58 - __main__ - INFO - Progress: 505000/1077684 parcels processed
+2025-08-20 16:09:58 - __main__ - INFO - Processing chunk 101 (5000 parcels)
+2025-08-20 16:09:58 - src.zonal_processor - INFO - [Chunk 101] Processing 5000 parcels
+2025-08-20 16:09:58 - src.zonal_processor - INFO - [Chunk 101] Loaded raster window: (6430, 4032)
+2025-08-20 16:09:58 - src.zonal_processor - INFO - [Chunk 101] Calculating zonal statistics
+2025-08-20 16:10:02 - src.zonal_processor - INFO - [Chunk 101] Processed 5000 parcels in 3.84s (1303.2 parcels/s)
+2025-08-20 16:10:02 - __main__ - INFO - Processing chunk 102 (5000 parcels)
+2025-08-20 16:10:02 - src.zonal_processor - INFO - [Chunk 102] Processing 5000 parcels
+2025-08-20 16:10:02 - src.zonal_processor - INFO - [Chunk 102] Loaded raster window: (6577, 4213)
+2025-08-20 16:10:02 - src.zonal_processor - INFO - [Chunk 102] Calculating zonal statistics
+2025-08-20 16:10:06 - src.zonal_processor - INFO - [Chunk 102] Processed 5000 parcels in 4.05s (1235.5 parcels/s)
+2025-08-20 16:10:06 - __main__ - INFO - Processing chunk 103 (5000 parcels)
+2025-08-20 16:10:06 - src.zonal_processor - INFO - [Chunk 103] Processing 5000 parcels
+2025-08-20 16:10:06 - src.zonal_processor - INFO - [Chunk 103] Loaded raster window: (6417, 3981)
+2025-08-20 16:10:06 - src.zonal_processor - INFO - [Chunk 103] Calculating zonal statistics
+2025-08-20 16:10:10 - src.zonal_processor - INFO - [Chunk 103] Processed 5000 parcels in 3.97s (1260.9 parcels/s)
+2025-08-20 16:10:10 - __main__ - INFO - Processing chunk 104 (5000 parcels)
+2025-08-20 16:10:10 - src.zonal_processor - INFO - [Chunk 104] Processing 5000 parcels
+2025-08-20 16:10:10 - src.zonal_processor - INFO - [Chunk 104] Loaded raster window: (6489, 4146)
+2025-08-20 16:10:10 - src.zonal_processor - INFO - [Chunk 104] Calculating zonal statistics
+2025-08-20 16:10:14 - src.zonal_processor - INFO - [Chunk 104] Processed 5000 parcels in 3.92s (1275.1 parcels/s)
+2025-08-20 16:10:14 - __main__ - INFO - Processing chunk 105 (5000 parcels)
+2025-08-20 16:10:14 - src.zonal_processor - INFO - [Chunk 105] Processing 5000 parcels
+2025-08-20 16:10:14 - src.zonal_processor - INFO - [Chunk 105] Loaded raster window: (6576, 4294)
+2025-08-20 16:10:14 - src.zonal_processor - INFO - [Chunk 105] Calculating zonal statistics
+2025-08-20 16:10:17 - src.zonal_processor - INFO - [Chunk 105] Processed 5000 parcels in 3.82s (1309.9 parcels/s)
+2025-08-20 16:10:17 - __main__ - INFO - Processing chunk 106 (5000 parcels)
+2025-08-20 16:10:17 - src.zonal_processor - INFO - [Chunk 106] Processing 5000 parcels
+2025-08-20 16:10:18 - src.zonal_processor - INFO - [Chunk 106] Loaded raster window: (6497, 4247)
+2025-08-20 16:10:18 - src.zonal_processor - INFO - [Chunk 106] Calculating zonal statistics
+2025-08-20 16:10:21 - src.zonal_processor - INFO - [Chunk 106] Processed 5000 parcels in 3.89s (1284.8 parcels/s)
+2025-08-20 16:10:21 - __main__ - INFO - Processing chunk 107 (5000 parcels)
+2025-08-20 16:10:21 - src.zonal_processor - INFO - [Chunk 107] Processing 5000 parcels
+2025-08-20 16:10:21 - src.zonal_processor - INFO - [Chunk 107] Loaded raster window: (6492, 4181)
+2025-08-20 16:10:21 - src.zonal_processor - INFO - [Chunk 107] Calculating zonal statistics
+2025-08-20 16:10:25 - src.zonal_processor - INFO - [Chunk 107] Processed 5000 parcels in 3.94s (1269.9 parcels/s)
+2025-08-20 16:10:25 - __main__ - INFO - Processing chunk 108 (5000 parcels)
+2025-08-20 16:10:25 - src.zonal_processor - INFO - [Chunk 108] Processing 5000 parcels
+2025-08-20 16:10:25 - src.zonal_processor - INFO - [Chunk 108] Loaded raster window: (6444, 4027)
+2025-08-20 16:10:25 - src.zonal_processor - INFO - [Chunk 108] Calculating zonal statistics
+2025-08-20 16:10:29 - src.zonal_processor - INFO - [Chunk 108] Processed 5000 parcels in 3.87s (1292.3 parcels/s)
+2025-08-20 16:10:29 - __main__ - INFO - Processing chunk 109 (5000 parcels)
+2025-08-20 16:10:29 - src.zonal_processor - INFO - [Chunk 109] Processing 5000 parcels
+2025-08-20 16:10:29 - src.zonal_processor - INFO - [Chunk 109] Loaded raster window: (6428, 4122)
+2025-08-20 16:10:29 - src.zonal_processor - INFO - [Chunk 109] Calculating zonal statistics
+2025-08-20 16:10:33 - src.zonal_processor - INFO - [Chunk 109] Processed 5000 parcels in 4.17s (1199.1 parcels/s)
+2025-08-20 16:10:33 - __main__ - INFO - Processing chunk 110 (5000 parcels)
+2025-08-20 16:10:33 - src.zonal_processor - INFO - [Chunk 110] Processing 5000 parcels
+2025-08-20 16:10:34 - src.zonal_processor - INFO - [Chunk 110] Loaded raster window: (7461, 8035)
+2025-08-20 16:10:34 - src.zonal_processor - INFO - [Chunk 110] Calculating zonal statistics
+2025-08-20 16:10:38 - src.zonal_processor - INFO - [Chunk 110] Processed 5000 parcels in 4.19s (1192.4 parcels/s)
+2025-08-20 16:10:38 - __main__ - INFO - Progress: 555000/1077684 parcels processed
+2025-08-20 16:10:38 - __main__ - INFO - Processing chunk 111 (5000 parcels)
+2025-08-20 16:10:38 - src.zonal_processor - INFO - [Chunk 111] Processing 5000 parcels
+2025-08-20 16:10:38 - src.zonal_processor - INFO - [Chunk 111] Loaded raster window: (7117, 4888)
+2025-08-20 16:10:38 - src.zonal_processor - INFO - [Chunk 111] Calculating zonal statistics
+2025-08-20 16:10:42 - src.zonal_processor - INFO - [Chunk 111] Processed 5000 parcels in 4.21s (1186.7 parcels/s)
+2025-08-20 16:10:42 - __main__ - INFO - Processing chunk 112 (5000 parcels)
+2025-08-20 16:10:42 - src.zonal_processor - INFO - [Chunk 112] Processing 5000 parcels
+2025-08-20 16:10:42 - src.zonal_processor - INFO - [Chunk 112] Loaded raster window: (7023, 5131)
+2025-08-20 16:10:42 - src.zonal_processor - INFO - [Chunk 112] Calculating zonal statistics
+2025-08-20 16:10:46 - src.zonal_processor - INFO - [Chunk 112] Processed 5000 parcels in 4.21s (1187.9 parcels/s)
+2025-08-20 16:10:46 - __main__ - INFO - Processing chunk 113 (5000 parcels)
+2025-08-20 16:10:46 - src.zonal_processor - INFO - [Chunk 113] Processing 5000 parcels
+2025-08-20 16:10:46 - src.zonal_processor - INFO - [Chunk 113] Loaded raster window: (11380, 11116)
+2025-08-20 16:10:46 - src.zonal_processor - INFO - [Chunk 113] Calculating zonal statistics
+2025-08-20 16:10:50 - src.zonal_processor - INFO - [Chunk 113] Processed 5000 parcels in 4.42s (1131.6 parcels/s)
+2025-08-20 16:10:50 - __main__ - INFO - Processing chunk 114 (5000 parcels)
+2025-08-20 16:10:50 - src.zonal_processor - INFO - [Chunk 114] Processing 5000 parcels
+2025-08-20 16:10:51 - src.zonal_processor - INFO - [Chunk 114] Loaded raster window: (4191, 6204)
+2025-08-20 16:10:51 - src.zonal_processor - INFO - [Chunk 114] Calculating zonal statistics
+2025-08-20 16:10:54 - src.zonal_processor - INFO - [Chunk 114] Processed 5000 parcels in 3.93s (1272.6 parcels/s)
+2025-08-20 16:10:54 - __main__ - INFO - Processing chunk 115 (5000 parcels)
+2025-08-20 16:10:54 - src.zonal_processor - INFO - [Chunk 115] Processing 5000 parcels
+2025-08-20 16:10:54 - src.zonal_processor - INFO - [Chunk 115] Loaded raster window: (4267, 6405)
+2025-08-20 16:10:54 - src.zonal_processor - INFO - [Chunk 115] Calculating zonal statistics
+2025-08-20 16:10:58 - src.zonal_processor - INFO - [Chunk 115] Processed 5000 parcels in 3.95s (1266.0 parcels/s)
+2025-08-20 16:10:58 - __main__ - INFO - Processing chunk 116 (5000 parcels)
+2025-08-20 16:10:58 - src.zonal_processor - INFO - [Chunk 116] Processing 5000 parcels
+2025-08-20 16:10:58 - src.zonal_processor - INFO - [Chunk 116] Loaded raster window: (4458, 5874)
+2025-08-20 16:10:58 - src.zonal_processor - INFO - [Chunk 116] Calculating zonal statistics
+2025-08-20 16:11:02 - src.zonal_processor - INFO - [Chunk 116] Processed 5000 parcels in 3.89s (1285.8 parcels/s)
+2025-08-20 16:11:02 - __main__ - INFO - Processing chunk 117 (5000 parcels)
+2025-08-20 16:11:02 - src.zonal_processor - INFO - [Chunk 117] Processing 5000 parcels
+2025-08-20 16:11:02 - src.zonal_processor - INFO - [Chunk 117] Loaded raster window: (4208, 5842)
+2025-08-20 16:11:02 - src.zonal_processor - INFO - [Chunk 117] Calculating zonal statistics
+2025-08-20 16:11:06 - src.zonal_processor - INFO - [Chunk 117] Processed 5000 parcels in 3.96s (1261.2 parcels/s)
+2025-08-20 16:11:06 - __main__ - INFO - Processing chunk 118 (5000 parcels)
+2025-08-20 16:11:06 - src.zonal_processor - INFO - [Chunk 118] Processing 5000 parcels
+2025-08-20 16:11:06 - src.zonal_processor - INFO - [Chunk 118] Loaded raster window: (4002, 6227)
+2025-08-20 16:11:06 - src.zonal_processor - INFO - [Chunk 118] Calculating zonal statistics
+2025-08-20 16:11:10 - src.zonal_processor - INFO - [Chunk 118] Processed 5000 parcels in 3.94s (1268.6 parcels/s)
+2025-08-20 16:11:10 - __main__ - INFO - Processing chunk 119 (5000 parcels)
+2025-08-20 16:11:10 - src.zonal_processor - INFO - [Chunk 119] Processing 5000 parcels
+2025-08-20 16:11:10 - src.zonal_processor - INFO - [Chunk 119] Loaded raster window: (4320, 6111)
+2025-08-20 16:11:10 - src.zonal_processor - INFO - [Chunk 119] Calculating zonal statistics
+2025-08-20 16:11:14 - src.zonal_processor - INFO - [Chunk 119] Processed 5000 parcels in 3.94s (1268.5 parcels/s)
+2025-08-20 16:11:14 - __main__ - INFO - Processing chunk 120 (5000 parcels)
+2025-08-20 16:11:14 - src.zonal_processor - INFO - [Chunk 120] Processing 5000 parcels
+2025-08-20 16:11:14 - src.zonal_processor - INFO - [Chunk 120] Loaded raster window: (4119, 5752)
+2025-08-20 16:11:14 - src.zonal_processor - INFO - [Chunk 120] Calculating zonal statistics
+2025-08-20 16:11:18 - src.zonal_processor - INFO - [Chunk 120] Processed 5000 parcels in 3.89s (1286.2 parcels/s)
+2025-08-20 16:11:18 - __main__ - INFO - Progress: 605000/1077684 parcels processed
+2025-08-20 16:11:18 - __main__ - INFO - Processing chunk 121 (5000 parcels)
+2025-08-20 16:11:18 - src.zonal_processor - INFO - [Chunk 121] Processing 5000 parcels
+2025-08-20 16:11:18 - src.zonal_processor - INFO - [Chunk 121] Loaded raster window: (4056, 6441)
+2025-08-20 16:11:18 - src.zonal_processor - INFO - [Chunk 121] Calculating zonal statistics
+2025-08-20 16:11:22 - src.zonal_processor - INFO - [Chunk 121] Processed 5000 parcels in 4.00s (1249.4 parcels/s)
+2025-08-20 16:11:22 - __main__ - INFO - Processing chunk 122 (5000 parcels)
+2025-08-20 16:11:22 - src.zonal_processor - INFO - [Chunk 122] Processing 5000 parcels
+2025-08-20 16:11:22 - src.zonal_processor - INFO - [Chunk 122] Loaded raster window: (3986, 6044)
+2025-08-20 16:11:22 - src.zonal_processor - INFO - [Chunk 122] Calculating zonal statistics
+2025-08-20 16:11:26 - src.zonal_processor - INFO - [Chunk 122] Processed 5000 parcels in 4.00s (1249.7 parcels/s)
+2025-08-20 16:11:26 - __main__ - INFO - Processing chunk 123 (5000 parcels)
+2025-08-20 16:11:26 - src.zonal_processor - INFO - [Chunk 123] Processing 5000 parcels
+2025-08-20 16:11:26 - src.zonal_processor - INFO - [Chunk 123] Loaded raster window: (4325, 5736)
+2025-08-20 16:11:26 - src.zonal_processor - INFO - [Chunk 123] Calculating zonal statistics
+2025-08-20 16:11:30 - src.zonal_processor - INFO - [Chunk 123] Processed 5000 parcels in 3.95s (1267.0 parcels/s)
+2025-08-20 16:11:30 - __main__ - INFO - Processing chunk 124 (5000 parcels)
+2025-08-20 16:11:30 - src.zonal_processor - INFO - [Chunk 124] Processing 5000 parcels
+2025-08-20 16:11:30 - src.zonal_processor - INFO - [Chunk 124] Loaded raster window: (4130, 5647)
+2025-08-20 16:11:30 - src.zonal_processor - INFO - [Chunk 124] Calculating zonal statistics
+2025-08-20 16:11:34 - src.zonal_processor - INFO - [Chunk 124] Processed 5000 parcels in 3.89s (1287.0 parcels/s)
+2025-08-20 16:11:34 - __main__ - INFO - Processing chunk 125 (5000 parcels)
+2025-08-20 16:11:34 - src.zonal_processor - INFO - [Chunk 125] Processing 5000 parcels
+2025-08-20 16:11:34 - src.zonal_processor - INFO - [Chunk 125] Loaded raster window: (4342, 5574)
+2025-08-20 16:11:34 - src.zonal_processor - INFO - [Chunk 125] Calculating zonal statistics
+2025-08-20 16:11:38 - src.zonal_processor - INFO - [Chunk 125] Processed 5000 parcels in 3.86s (1296.1 parcels/s)
+2025-08-20 16:11:38 - __main__ - INFO - Processing chunk 126 (5000 parcels)
+2025-08-20 16:11:38 - src.zonal_processor - INFO - [Chunk 126] Processing 5000 parcels
+2025-08-20 16:11:38 - src.zonal_processor - INFO - [Chunk 126] Loaded raster window: (3809, 6198)
+2025-08-20 16:11:38 - src.zonal_processor - INFO - [Chunk 126] Calculating zonal statistics
+2025-08-20 16:11:42 - src.zonal_processor - INFO - [Chunk 126] Processed 5000 parcels in 3.98s (1255.7 parcels/s)
+2025-08-20 16:11:42 - __main__ - INFO - Processing chunk 127 (5000 parcels)
+2025-08-20 16:11:42 - src.zonal_processor - INFO - [Chunk 127] Processing 5000 parcels
+2025-08-20 16:11:42 - src.zonal_processor - INFO - [Chunk 127] Loaded raster window: (4352, 6296)
+2025-08-20 16:11:42 - src.zonal_processor - INFO - [Chunk 127] Calculating zonal statistics
+2025-08-20 16:11:46 - src.zonal_processor - INFO - [Chunk 127] Processed 5000 parcels in 3.98s (1255.4 parcels/s)
+2025-08-20 16:11:46 - __main__ - INFO - Processing chunk 128 (5000 parcels)
+2025-08-20 16:11:46 - src.zonal_processor - INFO - [Chunk 128] Processing 5000 parcels
+2025-08-20 16:11:46 - src.zonal_processor - INFO - [Chunk 128] Loaded raster window: (4074, 6336)
+2025-08-20 16:11:46 - src.zonal_processor - INFO - [Chunk 128] Calculating zonal statistics
+2025-08-20 16:11:50 - src.zonal_processor - INFO - [Chunk 128] Processed 5000 parcels in 4.24s (1180.3 parcels/s)
+2025-08-20 16:11:50 - __main__ - INFO - Processing chunk 129 (5000 parcels)
+2025-08-20 16:11:50 - src.zonal_processor - INFO - [Chunk 129] Processing 5000 parcels
+2025-08-20 16:11:50 - src.zonal_processor - INFO - [Chunk 129] Loaded raster window: (4155, 6284)
+2025-08-20 16:11:50 - src.zonal_processor - INFO - [Chunk 129] Calculating zonal statistics
+2025-08-20 16:11:54 - src.zonal_processor - INFO - [Chunk 129] Processed 5000 parcels in 3.89s (1284.4 parcels/s)
+2025-08-20 16:11:54 - __main__ - INFO - Processing chunk 130 (5000 parcels)
+2025-08-20 16:11:54 - src.zonal_processor - INFO - [Chunk 130] Processing 5000 parcels
+2025-08-20 16:11:54 - src.zonal_processor - INFO - [Chunk 130] Loaded raster window: (4148, 5761)
+2025-08-20 16:11:54 - src.zonal_processor - INFO - [Chunk 130] Calculating zonal statistics
+2025-08-20 16:11:58 - src.zonal_processor - INFO - [Chunk 130] Processed 5000 parcels in 3.88s (1287.3 parcels/s)
+2025-08-20 16:11:58 - __main__ - INFO - Progress: 655000/1077684 parcels processed
+2025-08-20 16:11:58 - __main__ - INFO - Processing chunk 131 (5000 parcels)
+2025-08-20 16:11:58 - src.zonal_processor - INFO - [Chunk 131] Processing 5000 parcels
+2025-08-20 16:11:58 - src.zonal_processor - INFO - [Chunk 131] Loaded raster window: (4271, 6104)
+2025-08-20 16:11:58 - src.zonal_processor - INFO - [Chunk 131] Calculating zonal statistics
+2025-08-20 16:12:02 - src.zonal_processor - INFO - [Chunk 131] Processed 5000 parcels in 4.05s (1234.5 parcels/s)
+2025-08-20 16:12:02 - __main__ - INFO - Processing chunk 132 (5000 parcels)
+2025-08-20 16:12:02 - src.zonal_processor - INFO - [Chunk 132] Processing 5000 parcels
+2025-08-20 16:12:02 - src.zonal_processor - INFO - [Chunk 132] Loaded raster window: (3963, 6258)
+2025-08-20 16:12:02 - src.zonal_processor - INFO - [Chunk 132] Calculating zonal statistics
+2025-08-20 16:12:06 - src.zonal_processor - INFO - [Chunk 132] Processed 5000 parcels in 4.01s (1246.8 parcels/s)
+2025-08-20 16:12:06 - __main__ - INFO - Processing chunk 133 (5000 parcels)
+2025-08-20 16:12:06 - src.zonal_processor - INFO - [Chunk 133] Processing 5000 parcels
+2025-08-20 16:12:06 - src.zonal_processor - INFO - [Chunk 133] Loaded raster window: (3915, 5640)
+2025-08-20 16:12:06 - src.zonal_processor - INFO - [Chunk 133] Calculating zonal statistics
+2025-08-20 16:12:10 - src.zonal_processor - INFO - [Chunk 133] Processed 5000 parcels in 3.97s (1258.3 parcels/s)
+2025-08-20 16:12:10 - __main__ - INFO - Processing chunk 134 (5000 parcels)
+2025-08-20 16:12:10 - src.zonal_processor - INFO - [Chunk 134] Processing 5000 parcels
+2025-08-20 16:12:10 - src.zonal_processor - INFO - [Chunk 134] Loaded raster window: (6580, 5854)
+2025-08-20 16:12:10 - src.zonal_processor - INFO - [Chunk 134] Calculating zonal statistics
+2025-08-20 16:12:14 - src.zonal_processor - INFO - [Chunk 134] Processed 5000 parcels in 4.60s (1087.6 parcels/s)
+2025-08-20 16:12:14 - __main__ - INFO - Processing chunk 135 (5000 parcels)
+2025-08-20 16:12:14 - src.zonal_processor - INFO - [Chunk 135] Processing 5000 parcels
+2025-08-20 16:12:14 - src.zonal_processor - INFO - [Chunk 135] Loaded raster window: (2820, 1802)
+2025-08-20 16:12:14 - src.zonal_processor - INFO - [Chunk 135] Calculating zonal statistics
+2025-08-20 16:12:18 - src.zonal_processor - INFO - [Chunk 135] Processed 5000 parcels in 4.02s (1243.2 parcels/s)
+2025-08-20 16:12:18 - __main__ - INFO - Processing chunk 136 (5000 parcels)
+2025-08-20 16:12:18 - src.zonal_processor - INFO - [Chunk 136] Processing 5000 parcels
+2025-08-20 16:12:19 - src.zonal_processor - INFO - [Chunk 136] Loaded raster window: (2832, 1867)
+2025-08-20 16:12:19 - src.zonal_processor - INFO - [Chunk 136] Calculating zonal statistics
+2025-08-20 16:12:23 - src.zonal_processor - INFO - [Chunk 136] Processed 5000 parcels in 4.22s (1185.8 parcels/s)
+2025-08-20 16:12:23 - __main__ - INFO - Processing chunk 137 (5000 parcels)
+2025-08-20 16:12:23 - src.zonal_processor - INFO - [Chunk 137] Processing 5000 parcels
+2025-08-20 16:12:23 - src.zonal_processor - INFO - [Chunk 137] Loaded raster window: (2879, 1770)
+2025-08-20 16:12:23 - src.zonal_processor - INFO - [Chunk 137] Calculating zonal statistics
+2025-08-20 16:12:27 - src.zonal_processor - INFO - [Chunk 137] Processed 5000 parcels in 4.02s (1244.9 parcels/s)
+2025-08-20 16:12:27 - __main__ - INFO - Processing chunk 138 (5000 parcels)
+2025-08-20 16:12:27 - src.zonal_processor - INFO - [Chunk 138] Processing 5000 parcels
+2025-08-20 16:12:27 - src.zonal_processor - INFO - [Chunk 138] Loaded raster window: (2861, 1766)
+2025-08-20 16:12:27 - src.zonal_processor - INFO - [Chunk 138] Calculating zonal statistics
+2025-08-20 16:12:31 - src.zonal_processor - INFO - [Chunk 138] Processed 5000 parcels in 3.97s (1259.7 parcels/s)
+2025-08-20 16:12:31 - __main__ - INFO - Processing chunk 139 (5000 parcels)
+2025-08-20 16:12:31 - src.zonal_processor - INFO - [Chunk 139] Processing 5000 parcels
+2025-08-20 16:12:31 - src.zonal_processor - INFO - [Chunk 139] Loaded raster window: (4427, 5947)
+2025-08-20 16:12:31 - src.zonal_processor - INFO - [Chunk 139] Calculating zonal statistics
+2025-08-20 16:12:35 - src.zonal_processor - INFO - [Chunk 139] Processed 5000 parcels in 3.96s (1263.7 parcels/s)
+2025-08-20 16:12:35 - __main__ - INFO - Processing chunk 140 (5000 parcels)
+2025-08-20 16:12:35 - src.zonal_processor - INFO - [Chunk 140] Processing 5000 parcels
+2025-08-20 16:12:35 - src.zonal_processor - INFO - [Chunk 140] Loaded raster window: (2431, 3639)
+2025-08-20 16:12:35 - src.zonal_processor - INFO - [Chunk 140] Calculating zonal statistics
+2025-08-20 16:12:38 - src.zonal_processor - INFO - [Chunk 140] Processed 5000 parcels in 3.69s (1356.8 parcels/s)
+2025-08-20 16:12:38 - __main__ - INFO - Progress: 705000/1077684 parcels processed
+2025-08-20 16:12:38 - __main__ - INFO - Processing chunk 141 (5000 parcels)
+2025-08-20 16:12:38 - src.zonal_processor - INFO - [Chunk 141] Processing 5000 parcels
+2025-08-20 16:12:38 - src.zonal_processor - INFO - [Chunk 141] Loaded raster window: (2474, 3949)
+2025-08-20 16:12:38 - src.zonal_processor - INFO - [Chunk 141] Calculating zonal statistics
+2025-08-20 16:12:42 - src.zonal_processor - INFO - [Chunk 141] Processed 5000 parcels in 3.84s (1302.0 parcels/s)
+2025-08-20 16:12:42 - __main__ - INFO - Processing chunk 142 (5000 parcels)
+2025-08-20 16:12:42 - src.zonal_processor - INFO - [Chunk 142] Processing 5000 parcels
+2025-08-20 16:12:42 - src.zonal_processor - INFO - [Chunk 142] Loaded raster window: (2653, 3966)
+2025-08-20 16:12:42 - src.zonal_processor - INFO - [Chunk 142] Calculating zonal statistics
+2025-08-20 16:12:46 - src.zonal_processor - INFO - [Chunk 142] Processed 5000 parcels in 3.80s (1314.3 parcels/s)
+2025-08-20 16:12:46 - __main__ - INFO - Processing chunk 143 (5000 parcels)
+2025-08-20 16:12:46 - src.zonal_processor - INFO - [Chunk 143] Processing 5000 parcels
+2025-08-20 16:12:46 - src.zonal_processor - INFO - [Chunk 143] Loaded raster window: (2448, 3721)
+2025-08-20 16:12:46 - src.zonal_processor - INFO - [Chunk 143] Calculating zonal statistics
+2025-08-20 16:12:50 - src.zonal_processor - INFO - [Chunk 143] Processed 5000 parcels in 3.70s (1351.8 parcels/s)
+2025-08-20 16:12:50 - __main__ - INFO - Processing chunk 144 (5000 parcels)
+2025-08-20 16:12:50 - src.zonal_processor - INFO - [Chunk 144] Processing 5000 parcels
+2025-08-20 16:12:50 - src.zonal_processor - INFO - [Chunk 144] Loaded raster window: (2529, 3852)
+2025-08-20 16:12:50 - src.zonal_processor - INFO - [Chunk 144] Calculating zonal statistics
+2025-08-20 16:12:53 - src.zonal_processor - INFO - [Chunk 144] Processed 5000 parcels in 3.67s (1362.6 parcels/s)
+2025-08-20 16:12:53 - __main__ - INFO - Processing chunk 145 (5000 parcels)
+2025-08-20 16:12:53 - src.zonal_processor - INFO - [Chunk 145] Processing 5000 parcels
+2025-08-20 16:12:53 - src.zonal_processor - INFO - [Chunk 145] Loaded raster window: (2481, 3761)
+2025-08-20 16:12:53 - src.zonal_processor - INFO - [Chunk 145] Calculating zonal statistics
+2025-08-20 16:12:57 - src.zonal_processor - INFO - [Chunk 145] Processed 5000 parcels in 3.81s (1311.8 parcels/s)
+2025-08-20 16:12:57 - __main__ - INFO - Processing chunk 146 (5000 parcels)
+2025-08-20 16:12:57 - src.zonal_processor - INFO - [Chunk 146] Processing 5000 parcels
+2025-08-20 16:12:57 - src.zonal_processor - INFO - [Chunk 146] Loaded raster window: (2510, 3662)
+2025-08-20 16:12:57 - src.zonal_processor - INFO - [Chunk 146] Calculating zonal statistics
+2025-08-20 16:13:01 - src.zonal_processor - INFO - [Chunk 146] Processed 5000 parcels in 3.82s (1307.7 parcels/s)
+2025-08-20 16:13:01 - __main__ - INFO - Processing chunk 147 (5000 parcels)
+2025-08-20 16:13:01 - src.zonal_processor - INFO - [Chunk 147] Processing 5000 parcels
+2025-08-20 16:13:02 - src.zonal_processor - INFO - [Chunk 147] Loaded raster window: (13807, 16087)
+2025-08-20 16:13:02 - src.zonal_processor - INFO - [Chunk 147] Calculating zonal statistics
+2025-08-20 16:13:06 - src.zonal_processor - INFO - [Chunk 147] Processed 5000 parcels in 4.97s (1005.8 parcels/s)
+2025-08-20 16:13:06 - __main__ - INFO - Processing chunk 148 (5000 parcels)
+2025-08-20 16:13:06 - src.zonal_processor - INFO - [Chunk 148] Processing 5000 parcels
+2025-08-20 16:13:06 - src.zonal_processor - INFO - [Chunk 148] Loaded raster window: (9390, 5240)
+2025-08-20 16:13:06 - src.zonal_processor - INFO - [Chunk 148] Calculating zonal statistics
+2025-08-20 16:13:10 - src.zonal_processor - INFO - [Chunk 148] Processed 5000 parcels in 4.36s (1147.1 parcels/s)
+2025-08-20 16:13:10 - __main__ - INFO - Processing chunk 149 (5000 parcels)
+2025-08-20 16:13:10 - src.zonal_processor - INFO - [Chunk 149] Processing 5000 parcels
+2025-08-20 16:13:11 - src.zonal_processor - INFO - [Chunk 149] Loaded raster window: (9423, 5126)
+2025-08-20 16:13:11 - src.zonal_processor - INFO - [Chunk 149] Calculating zonal statistics
+2025-08-20 16:13:15 - src.zonal_processor - INFO - [Chunk 149] Processed 5000 parcels in 4.32s (1158.0 parcels/s)
+2025-08-20 16:13:15 - __main__ - INFO - Processing chunk 150 (5000 parcels)
+2025-08-20 16:13:15 - src.zonal_processor - INFO - [Chunk 150] Processing 5000 parcels
+2025-08-20 16:13:16 - src.zonal_processor - INFO - [Chunk 150] Loaded raster window: (15677, 15402)
+2025-08-20 16:13:16 - src.zonal_processor - INFO - [Chunk 150] Calculating zonal statistics
+2025-08-20 16:13:20 - src.zonal_processor - INFO - [Chunk 150] Processed 5000 parcels in 5.11s (977.7 parcels/s)
+2025-08-20 16:13:20 - __main__ - INFO - Progress: 755000/1077684 parcels processed
+2025-08-20 16:13:20 - __main__ - INFO - Processing chunk 151 (5000 parcels)
+2025-08-20 16:13:20 - src.zonal_processor - INFO - [Chunk 151] Processing 5000 parcels
+2025-08-20 16:13:20 - src.zonal_processor - INFO - [Chunk 151] Loaded raster window: (2758, 3015)
+2025-08-20 16:13:20 - src.zonal_processor - INFO - [Chunk 151] Calculating zonal statistics
+2025-08-20 16:13:24 - src.zonal_processor - INFO - [Chunk 151] Processed 5000 parcels in 3.69s (1356.4 parcels/s)
+2025-08-20 16:13:24 - __main__ - INFO - Processing chunk 152 (5000 parcels)
+2025-08-20 16:13:24 - src.zonal_processor - INFO - [Chunk 152] Processing 5000 parcels
+2025-08-20 16:13:24 - src.zonal_processor - INFO - [Chunk 152] Loaded raster window: (2844, 3000)
+2025-08-20 16:13:24 - src.zonal_processor - INFO - [Chunk 152] Calculating zonal statistics
+2025-08-20 16:13:27 - src.zonal_processor - INFO - [Chunk 152] Processed 5000 parcels in 3.78s (1324.0 parcels/s)
+2025-08-20 16:13:27 - __main__ - INFO - Processing chunk 153 (5000 parcels)
+2025-08-20 16:13:27 - src.zonal_processor - INFO - [Chunk 153] Processing 5000 parcels
+2025-08-20 16:13:27 - src.zonal_processor - INFO - [Chunk 153] Loaded raster window: (2810, 3630)
+2025-08-20 16:13:27 - src.zonal_processor - INFO - [Chunk 153] Calculating zonal statistics
+2025-08-20 16:13:31 - src.zonal_processor - INFO - [Chunk 153] Processed 5000 parcels in 3.74s (1336.2 parcels/s)
+2025-08-20 16:13:31 - __main__ - INFO - Processing chunk 154 (5000 parcels)
+2025-08-20 16:13:31 - src.zonal_processor - INFO - [Chunk 154] Processing 5000 parcels
+2025-08-20 16:13:31 - src.zonal_processor - INFO - [Chunk 154] Loaded raster window: (2818, 3307)
+2025-08-20 16:13:31 - src.zonal_processor - INFO - [Chunk 154] Calculating zonal statistics
+2025-08-20 16:13:35 - src.zonal_processor - INFO - [Chunk 154] Processed 5000 parcels in 3.63s (1377.5 parcels/s)
+2025-08-20 16:13:35 - __main__ - INFO - Processing chunk 155 (5000 parcels)
+2025-08-20 16:13:35 - src.zonal_processor - INFO - [Chunk 155] Processing 5000 parcels
+2025-08-20 16:13:35 - src.zonal_processor - INFO - [Chunk 155] Loaded raster window: (2845, 3552)
+2025-08-20 16:13:35 - src.zonal_processor - INFO - [Chunk 155] Calculating zonal statistics
+2025-08-20 16:13:39 - src.zonal_processor - INFO - [Chunk 155] Processed 5000 parcels in 3.80s (1315.4 parcels/s)
+2025-08-20 16:13:39 - __main__ - INFO - Processing chunk 156 (5000 parcels)
+2025-08-20 16:13:39 - src.zonal_processor - INFO - [Chunk 156] Processing 5000 parcels
+2025-08-20 16:13:39 - src.zonal_processor - INFO - [Chunk 156] Loaded raster window: (2865, 3026)
+2025-08-20 16:13:39 - src.zonal_processor - INFO - [Chunk 156] Calculating zonal statistics
+2025-08-20 16:13:42 - src.zonal_processor - INFO - [Chunk 156] Processed 5000 parcels in 3.72s (1345.7 parcels/s)
+2025-08-20 16:13:42 - __main__ - INFO - Processing chunk 157 (5000 parcels)
+2025-08-20 16:13:42 - src.zonal_processor - INFO - [Chunk 157] Processing 5000 parcels
+2025-08-20 16:13:42 - src.zonal_processor - INFO - [Chunk 157] Loaded raster window: (2811, 3022)
+2025-08-20 16:13:42 - src.zonal_processor - INFO - [Chunk 157] Calculating zonal statistics
+2025-08-20 16:13:46 - src.zonal_processor - INFO - [Chunk 157] Processed 5000 parcels in 3.88s (1289.1 parcels/s)
+2025-08-20 16:13:46 - __main__ - INFO - Processing chunk 158 (5000 parcels)
+2025-08-20 16:13:46 - src.zonal_processor - INFO - [Chunk 158] Processing 5000 parcels
+2025-08-20 16:13:46 - src.zonal_processor - INFO - [Chunk 158] Loaded raster window: (2980, 3400)
+2025-08-20 16:13:46 - src.zonal_processor - INFO - [Chunk 158] Calculating zonal statistics
+2025-08-20 16:13:50 - src.zonal_processor - INFO - [Chunk 158] Processed 5000 parcels in 3.61s (1385.8 parcels/s)
+2025-08-20 16:13:50 - __main__ - INFO - Processing chunk 159 (5000 parcels)
+2025-08-20 16:13:50 - src.zonal_processor - INFO - [Chunk 159] Processing 5000 parcels
+2025-08-20 16:13:50 - src.zonal_processor - INFO - [Chunk 159] Loaded raster window: (2952, 3696)
+2025-08-20 16:13:50 - src.zonal_processor - INFO - [Chunk 159] Calculating zonal statistics
+2025-08-20 16:13:54 - src.zonal_processor - INFO - [Chunk 159] Processed 5000 parcels in 3.77s (1325.1 parcels/s)
+2025-08-20 16:13:54 - __main__ - INFO - Processing chunk 160 (5000 parcels)
+2025-08-20 16:13:54 - src.zonal_processor - INFO - [Chunk 160] Processing 5000 parcels
+2025-08-20 16:13:54 - src.zonal_processor - INFO - [Chunk 160] Loaded raster window: (3085, 10664)
+2025-08-20 16:13:54 - src.zonal_processor - INFO - [Chunk 160] Calculating zonal statistics
+2025-08-20 16:13:58 - src.zonal_processor - INFO - [Chunk 160] Processed 5000 parcels in 3.87s (1291.7 parcels/s)
+2025-08-20 16:13:58 - __main__ - INFO - Progress: 805000/1077684 parcels processed
+2025-08-20 16:13:58 - __main__ - INFO - Processing chunk 161 (5000 parcels)
+2025-08-20 16:13:58 - src.zonal_processor - INFO - [Chunk 161] Processing 5000 parcels
+2025-08-20 16:13:58 - src.zonal_processor - INFO - [Chunk 161] Loaded raster window: (3572, 2415)
+2025-08-20 16:13:58 - src.zonal_processor - INFO - [Chunk 161] Calculating zonal statistics
+2025-08-20 16:14:02 - src.zonal_processor - INFO - [Chunk 161] Processed 5000 parcels in 4.27s (1170.7 parcels/s)
+2025-08-20 16:14:02 - __main__ - INFO - Processing chunk 162 (5000 parcels)
+2025-08-20 16:14:02 - src.zonal_processor - INFO - [Chunk 162] Processing 5000 parcels
+2025-08-20 16:14:02 - src.zonal_processor - INFO - [Chunk 162] Loaded raster window: (5110, 9319)
+2025-08-20 16:14:02 - src.zonal_processor - INFO - [Chunk 162] Calculating zonal statistics
+2025-08-20 16:14:06 - src.zonal_processor - INFO - [Chunk 162] Processed 5000 parcels in 4.06s (1231.0 parcels/s)
+2025-08-20 16:14:06 - __main__ - INFO - Processing chunk 163 (5000 parcels)
+2025-08-20 16:14:06 - src.zonal_processor - INFO - [Chunk 163] Processing 5000 parcels
+2025-08-20 16:14:06 - src.zonal_processor - INFO - [Chunk 163] Loaded raster window: (1584, 2516)
+2025-08-20 16:14:06 - src.zonal_processor - INFO - [Chunk 163] Calculating zonal statistics
+2025-08-20 16:14:09 - src.zonal_processor - INFO - [Chunk 163] Processed 5000 parcels in 3.56s (1405.6 parcels/s)
+2025-08-20 16:14:09 - __main__ - INFO - Processing chunk 164 (5000 parcels)
+2025-08-20 16:14:09 - src.zonal_processor - INFO - [Chunk 164] Processing 5000 parcels
+2025-08-20 16:14:09 - src.zonal_processor - INFO - [Chunk 164] Loaded raster window: (1631, 2527)
+2025-08-20 16:14:09 - src.zonal_processor - INFO - [Chunk 164] Calculating zonal statistics
+2025-08-20 16:14:13 - src.zonal_processor - INFO - [Chunk 164] Processed 5000 parcels in 3.64s (1373.2 parcels/s)
+2025-08-20 16:14:13 - __main__ - INFO - Processing chunk 165 (5000 parcels)
+2025-08-20 16:14:13 - src.zonal_processor - INFO - [Chunk 165] Processing 5000 parcels
+2025-08-20 16:14:13 - src.zonal_processor - INFO - [Chunk 165] Loaded raster window: (1651, 2485)
+2025-08-20 16:14:13 - src.zonal_processor - INFO - [Chunk 165] Calculating zonal statistics
+2025-08-20 16:14:17 - src.zonal_processor - INFO - [Chunk 165] Processed 5000 parcels in 3.67s (1362.9 parcels/s)
+2025-08-20 16:14:17 - __main__ - INFO - Processing chunk 166 (5000 parcels)
+2025-08-20 16:14:17 - src.zonal_processor - INFO - [Chunk 166] Processing 5000 parcels
+2025-08-20 16:14:17 - src.zonal_processor - INFO - [Chunk 166] Loaded raster window: (1626, 2527)
+2025-08-20 16:14:17 - src.zonal_processor - INFO - [Chunk 166] Calculating zonal statistics
+2025-08-20 16:14:21 - src.zonal_processor - INFO - [Chunk 166] Processed 5000 parcels in 3.79s (1319.3 parcels/s)
+2025-08-20 16:14:21 - __main__ - INFO - Processing chunk 167 (5000 parcels)
+2025-08-20 16:14:21 - src.zonal_processor - INFO - [Chunk 167] Processing 5000 parcels
+2025-08-20 16:14:21 - src.zonal_processor - INFO - [Chunk 167] Loaded raster window: (1687, 2597)
+2025-08-20 16:14:21 - src.zonal_processor - INFO - [Chunk 167] Calculating zonal statistics
+2025-08-20 16:14:24 - src.zonal_processor - INFO - [Chunk 167] Processed 5000 parcels in 3.72s (1344.3 parcels/s)
+2025-08-20 16:14:24 - __main__ - INFO - Processing chunk 168 (5000 parcels)
+2025-08-20 16:14:24 - src.zonal_processor - INFO - [Chunk 168] Processing 5000 parcels
+2025-08-20 16:14:24 - src.zonal_processor - INFO - [Chunk 168] Loaded raster window: (1583, 2477)
+2025-08-20 16:14:24 - src.zonal_processor - INFO - [Chunk 168] Calculating zonal statistics
+2025-08-20 16:14:28 - src.zonal_processor - INFO - [Chunk 168] Processed 5000 parcels in 3.72s (1345.3 parcels/s)
+2025-08-20 16:14:28 - __main__ - INFO - Processing chunk 169 (5000 parcels)
+2025-08-20 16:14:28 - src.zonal_processor - INFO - [Chunk 169] Processing 5000 parcels
+2025-08-20 16:14:28 - src.zonal_processor - INFO - [Chunk 169] Loaded raster window: (1572, 2487)
+2025-08-20 16:14:28 - src.zonal_processor - INFO - [Chunk 169] Calculating zonal statistics
+2025-08-20 16:14:32 - src.zonal_processor - INFO - [Chunk 169] Processed 5000 parcels in 3.71s (1347.2 parcels/s)
+2025-08-20 16:14:32 - __main__ - INFO - Processing chunk 170 (5000 parcels)
+2025-08-20 16:14:32 - src.zonal_processor - INFO - [Chunk 170] Processing 5000 parcels
+2025-08-20 16:14:32 - src.zonal_processor - INFO - [Chunk 170] Loaded raster window: (1538, 2471)
+2025-08-20 16:14:32 - src.zonal_processor - INFO - [Chunk 170] Calculating zonal statistics
+2025-08-20 16:14:35 - src.zonal_processor - INFO - [Chunk 170] Processed 5000 parcels in 3.58s (1398.2 parcels/s)
+2025-08-20 16:14:35 - __main__ - INFO - Progress: 855000/1077684 parcels processed
+2025-08-20 16:14:35 - __main__ - INFO - Processing chunk 171 (5000 parcels)
+2025-08-20 16:14:35 - src.zonal_processor - INFO - [Chunk 171] Processing 5000 parcels
+2025-08-20 16:14:35 - src.zonal_processor - INFO - [Chunk 171] Loaded raster window: (1521, 2516)
+2025-08-20 16:14:35 - src.zonal_processor - INFO - [Chunk 171] Calculating zonal statistics
+2025-08-20 16:14:39 - src.zonal_processor - INFO - [Chunk 171] Processed 5000 parcels in 3.68s (1360.2 parcels/s)
+2025-08-20 16:14:39 - __main__ - INFO - Processing chunk 172 (5000 parcels)
+2025-08-20 16:14:39 - src.zonal_processor - INFO - [Chunk 172] Processing 5000 parcels
+2025-08-20 16:14:39 - src.zonal_processor - INFO - [Chunk 172] Loaded raster window: (1550, 2508)
+2025-08-20 16:14:39 - src.zonal_processor - INFO - [Chunk 172] Calculating zonal statistics
+2025-08-20 16:14:43 - src.zonal_processor - INFO - [Chunk 172] Processed 5000 parcels in 3.69s (1354.5 parcels/s)
+2025-08-20 16:14:43 - __main__ - INFO - Processing chunk 173 (5000 parcels)
+2025-08-20 16:14:43 - src.zonal_processor - INFO - [Chunk 173] Processing 5000 parcels
+2025-08-20 16:14:43 - src.zonal_processor - INFO - [Chunk 173] Loaded raster window: (1625, 2484)
+2025-08-20 16:14:43 - src.zonal_processor - INFO - [Chunk 173] Calculating zonal statistics
+2025-08-20 16:14:46 - src.zonal_processor - INFO - [Chunk 173] Processed 5000 parcels in 3.65s (1370.0 parcels/s)
+2025-08-20 16:14:46 - __main__ - INFO - Processing chunk 174 (5000 parcels)
+2025-08-20 16:14:46 - src.zonal_processor - INFO - [Chunk 174] Processing 5000 parcels
+2025-08-20 16:14:46 - src.zonal_processor - INFO - [Chunk 174] Loaded raster window: (1693, 2557)
+2025-08-20 16:14:46 - src.zonal_processor - INFO - [Chunk 174] Calculating zonal statistics
+2025-08-20 16:14:50 - src.zonal_processor - INFO - [Chunk 174] Processed 5000 parcels in 3.61s (1385.1 parcels/s)
+2025-08-20 16:14:50 - __main__ - INFO - Processing chunk 175 (5000 parcels)
+2025-08-20 16:14:50 - src.zonal_processor - INFO - [Chunk 175] Processing 5000 parcels
+2025-08-20 16:14:50 - src.zonal_processor - INFO - [Chunk 175] Loaded raster window: (3315, 5416)
+2025-08-20 16:14:50 - src.zonal_processor - INFO - [Chunk 175] Calculating zonal statistics
+2025-08-20 16:14:54 - src.zonal_processor - INFO - [Chunk 175] Processed 5000 parcels in 3.73s (1338.7 parcels/s)
+2025-08-20 16:14:54 - __main__ - INFO - Processing chunk 176 (5000 parcels)
+2025-08-20 16:14:54 - src.zonal_processor - INFO - [Chunk 176] Processing 5000 parcels
+2025-08-20 16:14:54 - src.zonal_processor - INFO - [Chunk 176] Loaded raster window: (1689, 1987)
+2025-08-20 16:14:54 - src.zonal_processor - INFO - [Chunk 176] Calculating zonal statistics
+2025-08-20 16:14:58 - src.zonal_processor - INFO - [Chunk 176] Processed 5000 parcels in 3.82s (1308.3 parcels/s)
+2025-08-20 16:14:58 - __main__ - INFO - Processing chunk 177 (5000 parcels)
+2025-08-20 16:14:58 - src.zonal_processor - INFO - [Chunk 177] Processing 5000 parcels
+2025-08-20 16:14:58 - src.zonal_processor - INFO - [Chunk 177] Loaded raster window: (1682, 2000)
+2025-08-20 16:14:58 - src.zonal_processor - INFO - [Chunk 177] Calculating zonal statistics
+2025-08-20 16:15:01 - src.zonal_processor - INFO - [Chunk 177] Processed 5000 parcels in 3.70s (1352.0 parcels/s)
+2025-08-20 16:15:01 - __main__ - INFO - Processing chunk 178 (5000 parcels)
+2025-08-20 16:15:01 - src.zonal_processor - INFO - [Chunk 178] Processing 5000 parcels
+2025-08-20 16:15:01 - src.zonal_processor - INFO - [Chunk 178] Loaded raster window: (1685, 2010)
+2025-08-20 16:15:01 - src.zonal_processor - INFO - [Chunk 178] Calculating zonal statistics
+2025-08-20 16:15:05 - src.zonal_processor - INFO - [Chunk 178] Processed 5000 parcels in 3.84s (1302.2 parcels/s)
+2025-08-20 16:15:05 - __main__ - INFO - Processing chunk 179 (5000 parcels)
+2025-08-20 16:15:05 - src.zonal_processor - INFO - [Chunk 179] Processing 5000 parcels
+2025-08-20 16:15:05 - src.zonal_processor - INFO - [Chunk 179] Loaded raster window: (1661, 1971)
+2025-08-20 16:15:05 - src.zonal_processor - INFO - [Chunk 179] Calculating zonal statistics
+2025-08-20 16:15:09 - src.zonal_processor - INFO - [Chunk 179] Processed 5000 parcels in 3.87s (1291.5 parcels/s)
+2025-08-20 16:15:09 - __main__ - INFO - Processing chunk 180 (5000 parcels)
+2025-08-20 16:15:09 - src.zonal_processor - INFO - [Chunk 180] Processing 5000 parcels
+2025-08-20 16:15:09 - src.zonal_processor - INFO - [Chunk 180] Loaded raster window: (4941, 9676)
+2025-08-20 16:15:09 - src.zonal_processor - INFO - [Chunk 180] Calculating zonal statistics
+2025-08-20 16:15:14 - src.zonal_processor - INFO - [Chunk 180] Processed 5000 parcels in 4.49s (1112.4 parcels/s)
+2025-08-20 16:15:14 - __main__ - INFO - Progress: 905000/1077684 parcels processed
+2025-08-20 16:15:14 - __main__ - INFO - Processing chunk 181 (5000 parcels)
+2025-08-20 16:15:14 - src.zonal_processor - INFO - [Chunk 181] Processing 5000 parcels
+2025-08-20 16:15:14 - src.zonal_processor - INFO - [Chunk 181] Loaded raster window: (2805, 2390)
+2025-08-20 16:15:14 - src.zonal_processor - INFO - [Chunk 181] Calculating zonal statistics
+2025-08-20 16:15:18 - src.zonal_processor - INFO - [Chunk 181] Processed 5000 parcels in 4.03s (1240.3 parcels/s)
+2025-08-20 16:15:18 - __main__ - INFO - Processing chunk 182 (5000 parcels)
+2025-08-20 16:15:18 - src.zonal_processor - INFO - [Chunk 182] Processing 5000 parcels
+2025-08-20 16:15:18 - src.zonal_processor - INFO - [Chunk 182] Loaded raster window: (2741, 2373)
+2025-08-20 16:15:18 - src.zonal_processor - INFO - [Chunk 182] Calculating zonal statistics
+2025-08-20 16:15:21 - src.zonal_processor - INFO - [Chunk 182] Processed 5000 parcels in 3.87s (1291.5 parcels/s)
+2025-08-20 16:15:21 - __main__ - INFO - Processing chunk 183 (5000 parcels)
+2025-08-20 16:15:21 - src.zonal_processor - INFO - [Chunk 183] Processing 5000 parcels
+2025-08-20 16:15:21 - src.zonal_processor - INFO - [Chunk 183] Loaded raster window: (2745, 2418)
+2025-08-20 16:15:21 - src.zonal_processor - INFO - [Chunk 183] Calculating zonal statistics
+2025-08-20 16:15:25 - src.zonal_processor - INFO - [Chunk 183] Processed 5000 parcels in 4.00s (1249.6 parcels/s)
+2025-08-20 16:15:25 - __main__ - INFO - Processing chunk 184 (5000 parcels)
+2025-08-20 16:15:25 - src.zonal_processor - INFO - [Chunk 184] Processing 5000 parcels
+2025-08-20 16:15:26 - src.zonal_processor - INFO - [Chunk 184] Loaded raster window: (6509, 15969)
+2025-08-20 16:15:26 - src.zonal_processor - INFO - [Chunk 184] Calculating zonal statistics
+2025-08-20 16:15:30 - src.zonal_processor - INFO - [Chunk 184] Processed 5000 parcels in 4.35s (1149.2 parcels/s)
+2025-08-20 16:15:30 - __main__ - INFO - Processing chunk 185 (5000 parcels)
+2025-08-20 16:15:30 - src.zonal_processor - INFO - [Chunk 185] Processing 5000 parcels
+2025-08-20 16:15:30 - src.zonal_processor - INFO - [Chunk 185] Loaded raster window: (3742, 3897)
+2025-08-20 16:15:30 - src.zonal_processor - INFO - [Chunk 185] Calculating zonal statistics
+2025-08-20 16:15:34 - src.zonal_processor - INFO - [Chunk 185] Processed 5000 parcels in 4.27s (1171.4 parcels/s)
+2025-08-20 16:15:34 - __main__ - INFO - Processing chunk 186 (5000 parcels)
+2025-08-20 16:15:34 - src.zonal_processor - INFO - [Chunk 186] Processing 5000 parcels
+2025-08-20 16:15:34 - src.zonal_processor - INFO - [Chunk 186] Loaded raster window: (3694, 4002)
+2025-08-20 16:15:34 - src.zonal_processor - INFO - [Chunk 186] Calculating zonal statistics
+2025-08-20 16:15:38 - src.zonal_processor - INFO - [Chunk 186] Processed 5000 parcels in 4.00s (1250.6 parcels/s)
+2025-08-20 16:15:38 - __main__ - INFO - Processing chunk 187 (5000 parcels)
+2025-08-20 16:15:38 - src.zonal_processor - INFO - [Chunk 187] Processing 5000 parcels
+2025-08-20 16:15:38 - src.zonal_processor - INFO - [Chunk 187] Loaded raster window: (3847, 3964)
+2025-08-20 16:15:38 - src.zonal_processor - INFO - [Chunk 187] Calculating zonal statistics
+2025-08-20 16:15:42 - src.zonal_processor - INFO - [Chunk 187] Processed 5000 parcels in 3.89s (1285.5 parcels/s)
+2025-08-20 16:15:42 - __main__ - INFO - Processing chunk 188 (5000 parcels)
+2025-08-20 16:15:42 - src.zonal_processor - INFO - [Chunk 188] Processing 5000 parcels
+2025-08-20 16:15:42 - src.zonal_processor - INFO - [Chunk 188] Loaded raster window: (3868, 3848)
+2025-08-20 16:15:42 - src.zonal_processor - INFO - [Chunk 188] Calculating zonal statistics
+2025-08-20 16:15:46 - src.zonal_processor - INFO - [Chunk 188] Processed 5000 parcels in 3.94s (1270.0 parcels/s)
+2025-08-20 16:15:46 - __main__ - INFO - Processing chunk 189 (5000 parcels)
+2025-08-20 16:15:46 - src.zonal_processor - INFO - [Chunk 189] Processing 5000 parcels
+2025-08-20 16:15:46 - src.zonal_processor - INFO - [Chunk 189] Loaded raster window: (3828, 3864)
+2025-08-20 16:15:46 - src.zonal_processor - INFO - [Chunk 189] Calculating zonal statistics
+2025-08-20 16:15:50 - src.zonal_processor - INFO - [Chunk 189] Processed 5000 parcels in 4.09s (1222.9 parcels/s)
+2025-08-20 16:15:50 - __main__ - INFO - Processing chunk 190 (5000 parcels)
+2025-08-20 16:15:50 - src.zonal_processor - INFO - [Chunk 190] Processing 5000 parcels
+2025-08-20 16:15:50 - src.zonal_processor - INFO - [Chunk 190] Loaded raster window: (4444, 4465)
+2025-08-20 16:15:50 - src.zonal_processor - INFO - [Chunk 190] Calculating zonal statistics
+2025-08-20 16:15:54 - src.zonal_processor - INFO - [Chunk 190] Processed 5000 parcels in 4.00s (1251.4 parcels/s)
+2025-08-20 16:15:54 - __main__ - INFO - Progress: 955000/1077684 parcels processed
+2025-08-20 16:15:54 - __main__ - INFO - Processing chunk 191 (5000 parcels)
+2025-08-20 16:15:54 - src.zonal_processor - INFO - [Chunk 191] Processing 5000 parcels
+2025-08-20 16:15:54 - src.zonal_processor - INFO - [Chunk 191] Loaded raster window: (3247, 3567)
+2025-08-20 16:15:54 - src.zonal_processor - INFO - [Chunk 191] Calculating zonal statistics
+2025-08-20 16:15:58 - src.zonal_processor - INFO - [Chunk 191] Processed 5000 parcels in 4.03s (1241.6 parcels/s)
+2025-08-20 16:15:58 - __main__ - INFO - Processing chunk 192 (5000 parcels)
+2025-08-20 16:15:58 - src.zonal_processor - INFO - [Chunk 192] Processing 5000 parcels
+2025-08-20 16:15:58 - src.zonal_processor - INFO - [Chunk 192] Loaded raster window: (3656, 5860)
+2025-08-20 16:15:58 - src.zonal_processor - INFO - [Chunk 192] Calculating zonal statistics
+2025-08-20 16:16:02 - src.zonal_processor - INFO - [Chunk 192] Processed 5000 parcels in 3.95s (1264.8 parcels/s)
+2025-08-20 16:16:02 - __main__ - INFO - Processing chunk 193 (5000 parcels)
+2025-08-20 16:16:02 - src.zonal_processor - INFO - [Chunk 193] Processing 5000 parcels
+2025-08-20 16:16:02 - src.zonal_processor - INFO - [Chunk 193] Loaded raster window: (4023, 3548)
+2025-08-20 16:16:02 - src.zonal_processor - INFO - [Chunk 193] Calculating zonal statistics
+2025-08-20 16:16:06 - src.zonal_processor - INFO - [Chunk 193] Processed 5000 parcels in 4.23s (1181.1 parcels/s)
+2025-08-20 16:16:06 - __main__ - INFO - Processing chunk 194 (5000 parcels)
+2025-08-20 16:16:06 - src.zonal_processor - INFO - [Chunk 194] Processing 5000 parcels
+2025-08-20 16:16:07 - src.zonal_processor - INFO - [Chunk 194] Loaded raster window: (5042, 14010)
+2025-08-20 16:16:07 - src.zonal_processor - INFO - [Chunk 194] Calculating zonal statistics
+2025-08-20 16:16:11 - src.zonal_processor - INFO - [Chunk 194] Processed 5000 parcels in 4.50s (1111.9 parcels/s)
+2025-08-20 16:16:11 - __main__ - INFO - Processing chunk 195 (5000 parcels)
+2025-08-20 16:16:11 - src.zonal_processor - INFO - [Chunk 195] Processing 5000 parcels
+2025-08-20 16:16:11 - src.zonal_processor - INFO - [Chunk 195] Loaded raster window: (3796, 3482)
+2025-08-20 16:16:11 - src.zonal_processor - INFO - [Chunk 195] Calculating zonal statistics
+2025-08-20 16:16:15 - src.zonal_processor - INFO - [Chunk 195] Processed 5000 parcels in 4.09s (1222.5 parcels/s)
+2025-08-20 16:16:15 - __main__ - INFO - Processing chunk 196 (5000 parcels)
+2025-08-20 16:16:15 - src.zonal_processor - INFO - [Chunk 196] Processing 5000 parcels
+2025-08-20 16:16:15 - src.zonal_processor - INFO - [Chunk 196] Loaded raster window: (5499, 6914)
+2025-08-20 16:16:15 - src.zonal_processor - INFO - [Chunk 196] Calculating zonal statistics
+2025-08-20 16:16:19 - src.zonal_processor - INFO - [Chunk 196] Processed 5000 parcels in 4.11s (1216.7 parcels/s)
+2025-08-20 16:16:19 - __main__ - INFO - Processing chunk 197 (5000 parcels)
+2025-08-20 16:16:19 - src.zonal_processor - INFO - [Chunk 197] Processing 5000 parcels
+2025-08-20 16:16:19 - src.zonal_processor - INFO - [Chunk 197] Loaded raster window: (1917, 1506)
+2025-08-20 16:16:19 - src.zonal_processor - INFO - [Chunk 197] Calculating zonal statistics
+2025-08-20 16:16:23 - src.zonal_processor - INFO - [Chunk 197] Processed 5000 parcels in 3.79s (1318.4 parcels/s)
+2025-08-20 16:16:23 - __main__ - INFO - Processing chunk 198 (5000 parcels)
+2025-08-20 16:16:23 - src.zonal_processor - INFO - [Chunk 198] Processing 5000 parcels
+2025-08-20 16:16:23 - src.zonal_processor - INFO - [Chunk 198] Loaded raster window: (1955, 1666)
+2025-08-20 16:16:23 - src.zonal_processor - INFO - [Chunk 198] Calculating zonal statistics
+2025-08-20 16:16:27 - src.zonal_processor - INFO - [Chunk 198] Processed 5000 parcels in 3.73s (1341.5 parcels/s)
+2025-08-20 16:16:27 - __main__ - INFO - Processing chunk 199 (5000 parcels)
+2025-08-20 16:16:27 - src.zonal_processor - INFO - [Chunk 199] Processing 5000 parcels
+2025-08-20 16:16:27 - src.zonal_processor - INFO - [Chunk 199] Loaded raster window: (2034, 1712)
+2025-08-20 16:16:27 - src.zonal_processor - INFO - [Chunk 199] Calculating zonal statistics
+2025-08-20 16:16:30 - src.zonal_processor - INFO - [Chunk 199] Processed 5000 parcels in 3.81s (1313.6 parcels/s)
+2025-08-20 16:16:30 - __main__ - INFO - Processing chunk 200 (5000 parcels)
+2025-08-20 16:16:30 - src.zonal_processor - INFO - [Chunk 200] Processing 5000 parcels
+2025-08-20 16:16:30 - src.zonal_processor - INFO - [Chunk 200] Loaded raster window: (2007, 1759)
+2025-08-20 16:16:30 - src.zonal_processor - INFO - [Chunk 200] Calculating zonal statistics
+2025-08-20 16:16:34 - src.zonal_processor - INFO - [Chunk 200] Processed 5000 parcels in 3.84s (1302.7 parcels/s)
+2025-08-20 16:16:34 - __main__ - INFO - Progress: 1005000/1077684 parcels processed
+2025-08-20 16:16:34 - __main__ - INFO - Processing chunk 201 (5000 parcels)
+2025-08-20 16:16:34 - src.zonal_processor - INFO - [Chunk 201] Processing 5000 parcels
+2025-08-20 16:16:34 - src.zonal_processor - INFO - [Chunk 201] Loaded raster window: (1914, 1689)
+2025-08-20 16:16:34 - src.zonal_processor - INFO - [Chunk 201] Calculating zonal statistics
+2025-08-20 16:16:38 - src.zonal_processor - INFO - [Chunk 201] Processed 5000 parcels in 3.94s (1270.3 parcels/s)
+2025-08-20 16:16:38 - __main__ - INFO - Processing chunk 202 (5000 parcels)
+2025-08-20 16:16:38 - src.zonal_processor - INFO - [Chunk 202] Processing 5000 parcels
+2025-08-20 16:16:38 - src.zonal_processor - INFO - [Chunk 202] Loaded raster window: (1951, 1466)
+2025-08-20 16:16:38 - src.zonal_processor - INFO - [Chunk 202] Calculating zonal statistics
+2025-08-20 16:16:42 - src.zonal_processor - INFO - [Chunk 202] Processed 5000 parcels in 3.72s (1343.1 parcels/s)
+2025-08-20 16:16:42 - __main__ - INFO - Processing chunk 203 (5000 parcels)
+2025-08-20 16:16:42 - src.zonal_processor - INFO - [Chunk 203] Processing 5000 parcels
+2025-08-20 16:16:42 - src.zonal_processor - INFO - [Chunk 203] Loaded raster window: (1971, 1869)
+2025-08-20 16:16:42 - src.zonal_processor - INFO - [Chunk 203] Calculating zonal statistics
+2025-08-20 16:16:46 - src.zonal_processor - INFO - [Chunk 203] Processed 5000 parcels in 3.84s (1303.8 parcels/s)
+2025-08-20 16:16:46 - __main__ - INFO - Processing chunk 204 (5000 parcels)
+2025-08-20 16:16:46 - src.zonal_processor - INFO - [Chunk 204] Processing 5000 parcels
+2025-08-20 16:16:46 - src.zonal_processor - INFO - [Chunk 204] Loaded raster window: (1947, 1450)
+2025-08-20 16:16:46 - src.zonal_processor - INFO - [Chunk 204] Calculating zonal statistics
+2025-08-20 16:16:50 - src.zonal_processor - INFO - [Chunk 204] Processed 5000 parcels in 4.08s (1226.1 parcels/s)
+2025-08-20 16:16:50 - __main__ - INFO - Processing chunk 205 (5000 parcels)
+2025-08-20 16:16:50 - src.zonal_processor - INFO - [Chunk 205] Processing 5000 parcels
+2025-08-20 16:16:50 - src.zonal_processor - INFO - [Chunk 205] Loaded raster window: (1898, 1602)
+2025-08-20 16:16:50 - src.zonal_processor - INFO - [Chunk 205] Calculating zonal statistics
+2025-08-20 16:16:54 - src.zonal_processor - INFO - [Chunk 205] Processed 5000 parcels in 3.71s (1348.8 parcels/s)
+2025-08-20 16:16:54 - __main__ - INFO - Processing chunk 206 (5000 parcels)
+2025-08-20 16:16:54 - src.zonal_processor - INFO - [Chunk 206] Processing 5000 parcels
+2025-08-20 16:16:54 - src.zonal_processor - INFO - [Chunk 206] Loaded raster window: (2009, 1938)
+2025-08-20 16:16:54 - src.zonal_processor - INFO - [Chunk 206] Calculating zonal statistics
+2025-08-20 16:16:57 - src.zonal_processor - INFO - [Chunk 206] Processed 5000 parcels in 3.72s (1345.0 parcels/s)
+2025-08-20 16:16:57 - __main__ - INFO - Processing chunk 207 (5000 parcels)
+2025-08-20 16:16:57 - src.zonal_processor - INFO - [Chunk 207] Processing 5000 parcels
+2025-08-20 16:16:57 - src.zonal_processor - INFO - [Chunk 207] Loaded raster window: (1936, 1634)
+2025-08-20 16:16:57 - src.zonal_processor - INFO - [Chunk 207] Calculating zonal statistics
+2025-08-20 16:17:01 - src.zonal_processor - INFO - [Chunk 207] Processed 5000 parcels in 3.88s (1290.2 parcels/s)
+2025-08-20 16:17:01 - __main__ - INFO - Processing chunk 208 (5000 parcels)
+2025-08-20 16:17:01 - src.zonal_processor - INFO - [Chunk 208] Processing 5000 parcels
+2025-08-20 16:17:01 - src.zonal_processor - INFO - [Chunk 208] Loaded raster window: (1972, 1635)
+2025-08-20 16:17:01 - src.zonal_processor - INFO - [Chunk 208] Calculating zonal statistics
+2025-08-20 16:17:05 - src.zonal_processor - INFO - [Chunk 208] Processed 5000 parcels in 3.78s (1323.6 parcels/s)
+2025-08-20 16:17:05 - __main__ - INFO - Processing chunk 209 (5000 parcels)
+2025-08-20 16:17:05 - src.zonal_processor - INFO - [Chunk 209] Processing 5000 parcels
+2025-08-20 16:17:05 - src.zonal_processor - INFO - [Chunk 209] Loaded raster window: (1939, 1684)
+2025-08-20 16:17:05 - src.zonal_processor - INFO - [Chunk 209] Calculating zonal statistics
+2025-08-20 16:17:09 - src.zonal_processor - INFO - [Chunk 209] Processed 5000 parcels in 3.81s (1313.4 parcels/s)
+2025-08-20 16:17:09 - __main__ - INFO - Processing chunk 210 (5000 parcels)
+2025-08-20 16:17:09 - src.zonal_processor - INFO - [Chunk 210] Processing 5000 parcels
+2025-08-20 16:17:09 - src.zonal_processor - INFO - [Chunk 210] Loaded raster window: (7588, 10251)
+2025-08-20 16:17:09 - src.zonal_processor - INFO - [Chunk 210] Calculating zonal statistics
+2025-08-20 16:17:13 - src.zonal_processor - INFO - [Chunk 210] Processed 5000 parcels in 4.48s (1115.2 parcels/s)
+2025-08-20 16:17:13 - __main__ - INFO - Progress: 1055000/1077684 parcels processed
+2025-08-20 16:17:13 - __main__ - INFO - Processing chunk 211 (5000 parcels)
+2025-08-20 16:17:13 - src.zonal_processor - INFO - [Chunk 211] Processing 5000 parcels
+2025-08-20 16:17:13 - src.zonal_processor - INFO - [Chunk 211] Loaded raster window: (1465, 2548)
+2025-08-20 16:17:13 - src.zonal_processor - INFO - [Chunk 211] Calculating zonal statistics
+2025-08-20 16:17:17 - src.zonal_processor - INFO - [Chunk 211] Processed 5000 parcels in 3.93s (1273.0 parcels/s)
+2025-08-20 16:17:17 - __main__ - INFO - Processing chunk 212 (5000 parcels)
+2025-08-20 16:17:17 - src.zonal_processor - INFO - [Chunk 212] Processing 5000 parcels
+2025-08-20 16:17:17 - src.zonal_processor - INFO - [Chunk 212] Loaded raster window: (1519, 2512)
+2025-08-20 16:17:17 - src.zonal_processor - INFO - [Chunk 212] Calculating zonal statistics
+2025-08-20 16:17:21 - src.zonal_processor - INFO - [Chunk 212] Processed 5000 parcels in 3.92s (1276.0 parcels/s)
+2025-08-20 16:17:21 - __main__ - INFO - Processing chunk 213 (5000 parcels)
+2025-08-20 16:17:21 - src.zonal_processor - INFO - [Chunk 213] Processing 5000 parcels
+2025-08-20 16:17:21 - src.zonal_processor - INFO - [Chunk 213] Loaded raster window: (1567, 2524)
+2025-08-20 16:17:21 - src.zonal_processor - INFO - [Chunk 213] Calculating zonal statistics
+2025-08-20 16:17:25 - src.zonal_processor - INFO - [Chunk 213] Processed 5000 parcels in 3.91s (1277.9 parcels/s)
+2025-08-20 16:17:25 - __main__ - INFO - Processing chunk 214 (5000 parcels)
+2025-08-20 16:17:25 - src.zonal_processor - INFO - [Chunk 214] Processing 5000 parcels
+2025-08-20 16:17:25 - src.zonal_processor - INFO - [Chunk 214] Loaded raster window: (1532, 2534)
+2025-08-20 16:17:25 - src.zonal_processor - INFO - [Chunk 214] Calculating zonal statistics
+2025-08-20 16:17:29 - src.zonal_processor - INFO - [Chunk 214] Processed 5000 parcels in 3.90s (1283.7 parcels/s)
+2025-08-20 16:17:29 - __main__ - INFO - Processing chunk 215 (2684 parcels)
+2025-08-20 16:17:29 - src.zonal_processor - INFO - [Chunk 215] Processing 2684 parcels
+2025-08-20 16:17:29 - src.zonal_processor - INFO - [Chunk 215] Loaded raster window: (1434, 2509)
+2025-08-20 16:17:29 - src.zonal_processor - INFO - [Chunk 215] Calculating zonal statistics
+2025-08-20 16:17:31 - src.zonal_processor - INFO - [Chunk 215] Processed 2684 parcels in 2.07s (1296.0 parcels/s)
+2025-08-20 16:17:31 - __main__ - INFO - ----------------------------------------
+2025-08-20 16:17:31 - __main__ - INFO - STEP 4: Aggregating results
+2025-08-20 16:17:31 - src.result_aggregator - INFO - Aggregating 216 result chunks
+2025-08-20 16:17:31 - src.result_aggregator - INFO - Aggregated 1077684 parcels
+2025-08-20 16:17:31 - src.result_aggregator - INFO - Joining results with original geometries
+2025-08-20 16:17:32 - src.zonal_processor - INFO - Validating results
+2025-08-20 16:17:33 - src.zonal_processor - WARNING - Found 5556 parcels with invalid proportion sums
+2025-08-20 16:17:33 - src.zonal_processor - INFO - Validation complete: 5018146/5023702 valid parcels
+2025-08-20 16:17:33 - __main__ - INFO - ----------------------------------------
+2025-08-20 16:17:33 - __main__ - INFO - STEP 5: Saving results
+2025-08-20 16:17:48 - src.result_aggregator - INFO - Saved results to /home/mihiarc/repos/parcel-lcms/outputs/parcel_land_use_results_20250820_161733.parquet
+2025-08-20 16:17:48 - src.result_aggregator - INFO - Generating summary statistics
+2025-08-20 16:17:48 - src.result_aggregator - INFO - Summary: {'total_parcels': 5023702, 'timestamp': '2025-08-20T16:17:48.450432', 'land_use_distribution': {'DEVELOPED': 4163793, 'FOREST': 516339, 'AGRICULTURE': 197084, 'RANGELAND_PASTURE': 124379, 'OTHER': 22056, 'UNKNOWN': 51}, 'average_proportions': {'agriculture_pct': 4.323250876297205, 'developed_pct': 78.38211566744522, 'forest_pct': 12.28397310443534, 'other_pct': 1.2008673260469134, 'rangeland_pasture_pct': 3.8005723105795988}, 'pixel_statistics': {'total_valid_pixels': np.int64(1785781768), 'avg_pixels_per_parcel': np.float64(355.4712775558741), 'parcels_with_no_pixels': np.int64(0)}, 'validation': {'valid_parcels': np.int64(5018146), 'invalid_parcels': np.int64(5556), 'validation_rate': np.float64(99.88940426800794)}}
+2025-08-20 16:17:48 - src.result_aggregator - INFO - Saved summary to /home/mihiarc/repos/parcel-lcms/outputs/processing_summary_20250820_161748.json
+2025-08-20 16:17:48 - src.result_aggregator - INFO - Saved report to /home/mihiarc/repos/parcel-lcms/outputs/processing_report_20250820_161748.txt
+2025-08-20 16:17:48 - src.chunk_manager - INFO - Cleaning up checkpoint files
+2025-08-20 16:17:48 - src.chunk_manager - INFO - Checkpoint cleanup complete
+2025-08-20 16:17:48 - __main__ - INFO - ----------------------------------------
+2025-08-20 16:17:48 - __main__ - INFO - PIPELINE COMPLETE
+2025-08-20 16:17:48 - __main__ - INFO - Total time: 1011.81 seconds
+2025-08-20 16:17:48 - __main__ - INFO - Output saved to: /home/mihiarc/repos/parcel-lcms/outputs/parcel_land_use_results_20250820_161733.parquet
+2025-08-20 16:17:48 - __main__ - INFO - ============================================================
