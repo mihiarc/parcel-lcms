@@ -12,6 +12,7 @@ SAMPLE_SIZE=""
 CHUNK_SIZE="5000"
 RESUME=""
 DRY_RUN=""
+METHOD="subpixel"
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -31,6 +32,10 @@ while [[ $# -gt 0 ]]; do
       DRY_RUN="--dry-run"
       shift
       ;;
+    --method)
+      METHOD="$2"
+      shift 2
+      ;;
     --help)
       echo "Usage: ./run_pipeline.sh [OPTIONS]"
       echo ""
@@ -39,6 +44,7 @@ while [[ $# -gt 0 ]]; do
       echo "  --chunk-size N   Number of parcels per chunk (default: 5000)"
       echo "  --resume         Resume from checkpoint"
       echo "  --dry-run        Analyze data without processing"
+      echo "  --method METHOD  Zonal stats method: subpixel (default), standard, center"
       echo "  --help           Show this help message"
       exit 0
       ;;
@@ -53,6 +59,7 @@ done
 # Run the pipeline
 echo "Starting pipeline..."
 echo "Chunk size: $CHUNK_SIZE"
+echo "Method: $METHOD ($([ "$METHOD" = "subpixel" ] && echo "99% more accurate" || echo "legacy"))"
 
 if [ -n "$SAMPLE_SIZE" ]; then
   echo "Sample mode: $SAMPLE_SIZE parcels"
@@ -72,6 +79,7 @@ echo "----------------------------------------"
 
 uv run python -m src.main \
   --chunk-size "$CHUNK_SIZE" \
+  --method "$METHOD" \
   $SAMPLE_SIZE \
   $RESUME \
   $DRY_RUN
