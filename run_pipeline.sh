@@ -13,6 +13,7 @@ CHUNK_SIZE="5000"
 RESUME=""
 DRY_RUN=""
 METHOD="subpixel"
+PARALLEL=""
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -36,6 +37,14 @@ while [[ $# -gt 0 ]]; do
       METHOD="$2"
       shift 2
       ;;
+    --parallel)
+      PARALLEL="--parallel"
+      shift
+      ;;
+    --no-parallel)
+      PARALLEL="--no-parallel"
+      shift
+      ;;
     --help)
       echo "Usage: ./run_pipeline.sh [OPTIONS]"
       echo ""
@@ -45,6 +54,8 @@ while [[ $# -gt 0 ]]; do
       echo "  --resume         Resume from checkpoint"
       echo "  --dry-run        Analyze data without processing"
       echo "  --method METHOD  Zonal stats method: subpixel (default, adaptive), standard, center"
+      echo "  --parallel       Enable parallel processing (default: enabled)"
+      echo "  --no-parallel    Disable parallel processing"
       echo "  --help           Show this help message"
       exit 0
       ;;
@@ -60,6 +71,13 @@ done
 echo "Starting pipeline..."
 echo "Chunk size: $CHUNK_SIZE"
 echo "Method: $METHOD ($([ "$METHOD" = "subpixel" ] && echo "adaptive resolution, 99% accurate" || echo "testing only"))"
+
+# Display parallel processing mode
+if [ "$PARALLEL" = "--no-parallel" ]; then
+  echo "Processing mode: Sequential (single core)"
+elif [ "$PARALLEL" = "--parallel" ] || [ -z "$PARALLEL" ]; then
+  echo "Processing mode: Parallel (${N_WORKERS:-8} workers)"
+fi
 
 if [ -n "$SAMPLE_SIZE" ]; then
   echo "Sample mode: $SAMPLE_SIZE parcels"
@@ -80,6 +98,7 @@ echo "----------------------------------------"
 uv run python -m src.main \
   --chunk-size "$CHUNK_SIZE" \
   --method "$METHOD" \
+  $PARALLEL \
   $SAMPLE_SIZE \
   $RESUME \
   $DRY_RUN
