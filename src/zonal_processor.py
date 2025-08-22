@@ -54,10 +54,13 @@ class ZonalStatsProcessor(BaseZonalStatsProcessor):
         Returns:
             Sub-pixel resolution (e.g., 5 means 5x5 grid)
         """
-        if parcel_acres < 1.0:
-            return 2  # 2x2 for very small parcels
+        # Special handling for sub-pixel parcels
+        if parcel_acres < 0.22:  # Less than 1 pixel (900 m² ≈ 0.22 acres)
+            return 10  # 10x10 for maximum precision on tiny parcels
+        elif parcel_acres < 1.0:
+            return 7  # 7x7 for very small parcels
         elif parcel_acres < 5.0:
-            return 3  # 3x3 for small parcels
+            return 5  # 5x5 for small parcels
         elif parcel_acres < 10.0:
             return 5  # 5x5 for medium parcels
         elif parcel_acres < 50.0:
@@ -142,6 +145,10 @@ class ZonalStatsProcessor(BaseZonalStatsProcessor):
             if parcel_acres is None:
                 # Calculate from geometry if not provided
                 parcel_acres = parcel.geometry.area / 4046.86
+            
+            # Log warning for sub-pixel parcels
+            if parcel_acres < 0.22:  # Less than 1 pixel
+                logger.debug(f"Processing sub-pixel parcel {parcel_id}: {parcel_acres:.3f} acres")
             
             # Determine adaptive sub-pixel resolution
             sub_factor = self.get_adaptive_subpixel_resolution(parcel_acres)
