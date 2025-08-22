@@ -6,7 +6,7 @@ Calculate land use class proportions within each parcel using high-accuracy sub-
 
 - **Adaptive sub-pixel accuracy**: Dynamic resolution based on parcel size for optimal accuracy
 - **99% more accurate**: Near-perfect correlation with actual parcel areas
-- **Parallel processing**: Multi-core execution with 8 workers by default (6-8x faster)
+- **Parallel processing**: Multi-core execution with 12 workers by default (10-12x faster)
 - **Memory-efficient**: Intelligent windowing with LRU cache (512MB default)
 - **CRS transformation**: Automatic alignment of different coordinate systems  
 - **Chunked processing**: Spatial and count-based chunking strategies
@@ -95,10 +95,10 @@ run_pipeline(
 
 ## Performance
 
-- **Memory usage**: 8-16 GB peak (2GB per worker in parallel mode)
+- **Memory usage**: 24 GB peak (2GB per worker × 12 workers)
 - **Processing speed**: ~1,500-2,000 parcels/second per worker
-- **Parallel speedup**: 6-8x faster with 8 workers (default)
-- **Estimated time**: 6-10 minutes for 2 million parcels (parallel mode)
+- **Parallel speedup**: 10-12x faster with 12 workers (default)
+- **Estimated time**: 3-5 minutes for 2 million parcels (parallel mode)
 - **Accuracy**: <0.015 acre average error (99% better than standard methods)
 
 ## Zonal Statistics Methods

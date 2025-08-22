@@ -76,7 +76,7 @@ echo "Method: $METHOD ($([ "$METHOD" = "subpixel" ] && echo "adaptive resolution
 if [ "$PARALLEL" = "--no-parallel" ]; then
   echo "Processing mode: Sequential (single core)"
 elif [ "$PARALLEL" = "--parallel" ] || [ -z "$PARALLEL" ]; then
-  echo "Processing mode: Parallel (${N_WORKERS:-8} workers)"
+  echo "Processing mode: Parallel (${N_WORKERS:-12} workers)"
 fi
 
 if [ -n "$SAMPLE_SIZE" ]; then

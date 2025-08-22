@@ -92,7 +92,7 @@ The system maps LCMS raster values to 5 land use categories:
 
 Default settings in `src/config.py`:
 - CHUNK_SIZE: 5000 parcels per chunk
-- N_WORKERS: 8 (parallel processing workers)
+- N_WORKERS: 12 (parallel processing workers)
 - MIN_PARCEL_AREA: 0 m² (no minimum - processes all parcels)
 - Default CRS: EPSG:5070 (CONUS Albers)
 
