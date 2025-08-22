@@ -24,7 +24,7 @@ from .config import (
 )
 from .data_loader import DataLoader
 from .preprocessor import DataPreprocessor  
-from .zonal_processor_optimized import OptimizedZonalStatsProcessor
+from .zonal_processor import ZonalStatsProcessor
 from .chunk_manager import ChunkManager
 from .result_aggregator import ResultAggregator
 
@@ -66,7 +66,7 @@ def run_pipeline(
         logger.info(f"Using {method} method for zonal statistics")
         data_loader = DataLoader()
         preprocessor = DataPreprocessor()
-        processor = OptimizedZonalStatsProcessor(n_workers=N_WORKERS)
+        processor = ZonalStatsProcessor(n_workers=N_WORKERS)
         chunk_manager = ChunkManager(chunk_size=chunk_size)
         aggregator = ResultAggregator()
         

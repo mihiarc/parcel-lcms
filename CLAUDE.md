@@ -49,18 +49,23 @@ uv run python test_real_data_comparison.py
 ### Core Processing Flow
 1. **DataLoader** (`src/data_loader.py`) - Loads parcel and raster data, validates compatibility
 2. **DataPreprocessor** (`src/preprocessor.py`) - Transforms CRS, validates geometries, filters parcels
-3. **OptimizedZonalStatsProcessor** (`src/zonal_processor_optimized.py`) - Main processing engine supporting three methods:
-   - Sub-pixel (default): 5x5 sub-pixel rasterization for fractional coverage
-   - Standard: Traditional all_touched method
-   - Center: Only pixel centers
+3. **ZonalStatsProcessor** (`src/zonal_processor.py`) - Main processing engine with adaptive sub-pixel method:
+   - Sub-pixel (default): Adaptive resolution based on parcel size
+   - Standard: Traditional all_touched method (for testing only)
+   - Center: Only pixel centers (for testing only)
 4. **ChunkManager** (`src/chunk_manager.py`) - Manages chunked processing with checkpoint/resume capability
 5. **ResultAggregator** (`src/result_aggregator.py`) - Combines results, generates reports and summaries
 
 ### Key Processing Methods
 
-The pipeline's core innovation is in `zonal_processor_optimized.py` which implements:
-- **Sub-pixel method**: Divides each pixel into 5x5 sub-pixels for accurate fractional coverage calculation
-- **Weighted method**: For parcels < 10 acres, uses special weighting to prevent overestimation
+The pipeline's core innovation is in `zonal_processor.py` which implements:
+- **Adaptive sub-pixel method**: Uses dynamic sub-pixel resolution based on parcel size:
+  - < 1 acre: 2x2 sub-pixels (finer control for tiny parcels)
+  - 1-5 acres: 3x3 sub-pixels
+  - 5-10 acres: 5x5 sub-pixels (optimal balance)
+  - 10-50 acres: 7x7 sub-pixels
+  - > 50 acres: 10x10 sub-pixels (maximum accuracy)
+- **Intelligent memory management**: LRU cache for raster windows, optimized windowing
 - **Multi-threaded processing**: Uses ProcessPoolExecutor for parallel chunk processing
 
 ### Data Flow

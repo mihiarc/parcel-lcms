@@ -44,7 +44,7 @@ while [[ $# -gt 0 ]]; do
       echo "  --chunk-size N   Number of parcels per chunk (default: 5000)"
       echo "  --resume         Resume from checkpoint"
       echo "  --dry-run        Analyze data without processing"
-      echo "  --method METHOD  Zonal stats method: subpixel (default), standard, center"
+      echo "  --method METHOD  Zonal stats method: subpixel (default, adaptive), standard, center"
       echo "  --help           Show this help message"
       exit 0
       ;;
@@ -59,7 +59,7 @@ done
 # Run the pipeline
 echo "Starting pipeline..."
 echo "Chunk size: $CHUNK_SIZE"
-echo "Method: $METHOD ($([ "$METHOD" = "subpixel" ] && echo "99% more accurate" || echo "legacy"))"
+echo "Method: $METHOD ($([ "$METHOD" = "subpixel" ] && echo "adaptive resolution, 99% accurate" || echo "testing only"))"
 
 if [ -n "$SAMPLE_SIZE" ]; then
   echo "Sample mode: $SAMPLE_SIZE parcels"

@@ -4,9 +4,9 @@ Calculate land use class proportions within each parcel using high-accuracy sub-
 
 ## Features
 
-- **Sub-pixel accuracy**: 99% more accurate than standard methods (default)
-- **Faster processing**: 20% faster than traditional approaches  
-- **Memory-efficient**: Handles millions of parcels against large rasters
+- **Adaptive sub-pixel accuracy**: Dynamic resolution based on parcel size for optimal accuracy
+- **99% more accurate**: Near-perfect correlation with actual parcel areas
+- **Memory-efficient**: Intelligent windowing with LRU cache (512MB default)
 - **CRS transformation**: Automatic alignment of different coordinate systems  
 - **Chunked processing**: Spatial and count-based chunking strategies
 - **Checkpoint/Resume**: Fault-tolerant processing with resume capability
@@ -41,7 +41,7 @@ uv run python -m src.main --sample 1000
 - `--parcels PATH`: Path to parcel boundaries (default: data/ParcelsWithAssessments.parquet)
 - `--chunk-size N`: Number of parcels per chunk (default: 5000)
 - `--strategy {count,spatial,hybrid}`: Chunking strategy (default: hybrid)
-- `--method {subpixel,standard,center}`: Zonal stats method (default: subpixel for 99% accuracy)
+- `--method {subpixel,standard,center}`: Zonal stats method (default: subpixel with adaptive resolution)
 - `--sample N`: Process only N parcels for testing
 - `--resume`: Resume from checkpoint
 - `--dry-run`: Analyze data without processing
@@ -96,22 +96,27 @@ run_pipeline(
 The pipeline supports three methods for calculating zonal statistics:
 
 ### Sub-pixel (Default) - RECOMMENDED
-- Uses 5x5 sub-pixel rasterization for fractional pixel coverage
+- **Adaptive resolution** based on parcel size:
+  - < 1 acre: 2x2 sub-pixels (finer control for tiny parcels)
+  - 1-5 acres: 3x3 sub-pixels
+  - 5-10 acres: 5x5 sub-pixels (optimal balance)
+  - 10-50 acres: 7x7 sub-pixels
+  - > 50 acres: 10x10 sub-pixels (maximum accuracy)
 - **99% more accurate** than standard methods
-- **20% faster** processing speed
-- Perfect for parcels < 10 acres
 - Near-perfect correlation (0.999) with actual parcel areas
+- Optimized for all parcel sizes
 
-### Standard
+### Standard (Testing Only)
 - Traditional `all_touched=True` method
 - Counts all pixels that touch parcel boundaries
 - Significantly overestimates small parcels (often 200-400% error)
-- Use only for backwards compatibility
+- Retained only for comparison and testing
 
-### Center
+### Center (Testing Only)
 - Only counts pixels whose centers fall within parcels
 - Underestimates parcel areas
 - May miss small parcels entirely
+- Retained only for comparison and testing
 
 ## Troubleshooting
 
