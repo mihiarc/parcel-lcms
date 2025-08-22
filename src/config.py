@@ -46,8 +46,14 @@ LAND_USE_DESCRIPTIONS = {
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "5000"))  # Parcels per chunk
 RASTER_WINDOW_SIZE = int(os.getenv("RASTER_WINDOW_SIZE", "10000"))  # Pixels
 MAX_MEMORY_GB = float(os.getenv("MAX_MEMORY_GB", "16"))
-N_WORKERS = int(os.getenv("N_WORKERS", "4"))
+N_WORKERS = int(os.getenv("N_WORKERS", "8"))
 CHECKPOINT_INTERVAL = int(os.getenv("CHECKPOINT_INTERVAL", "100"))  # Chunks
+
+# Parallel processing parameters
+PARALLEL_PROCESSING = os.getenv("PARALLEL_PROCESSING", "true").lower() == "true"
+MAX_PARALLEL_CHUNKS = int(os.getenv("MAX_PARALLEL_CHUNKS", "10"))  # Max chunks in flight
+WORKER_MEMORY_LIMIT = int(os.getenv("WORKER_MEMORY_LIMIT", "2048"))  # MB per worker
+SPATIAL_ORDERING = os.getenv("SPATIAL_ORDERING", "true").lower() == "true"  # Sort chunks spatially
 
 # Spatial chunking parameters
 SPATIAL_GRID_SIZE = int(os.getenv("SPATIAL_GRID_SIZE", "100"))  # Grid cells
@@ -77,7 +83,7 @@ LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 # Quality control thresholds
-MIN_VALID_PIXELS = int(os.getenv("MIN_VALID_PIXELS", "1"))
+MIN_VALID_PIXELS = float(os.getenv("MIN_VALID_PIXELS", "0.001"))  # Allow sub-pixel parcels
 MAX_PROPORTION_ERROR = float(os.getenv("MAX_PROPORTION_ERROR", "0.01"))  # 1%
 
 # Performance tuning
