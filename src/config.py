@@ -46,7 +46,7 @@ LAND_USE_DESCRIPTIONS = {
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "5000"))  # Parcels per chunk
 RASTER_WINDOW_SIZE = int(os.getenv("RASTER_WINDOW_SIZE", "10000"))  # Pixels
 MAX_MEMORY_GB = float(os.getenv("MAX_MEMORY_GB", "16"))
-N_WORKERS = int(os.getenv("N_WORKERS", "8"))
+N_WORKERS = int(os.getenv("N_WORKERS", "12"))
 CHECKPOINT_INTERVAL = int(os.getenv("CHECKPOINT_INTERVAL", "100"))  # Chunks
 
 # Parallel processing parameters
