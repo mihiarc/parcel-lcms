@@ -15,3 +15,8 @@ src/__pycache__/
 # Output directories
 outputs/
 output/
+
+# Temporary files and checkpoints
+temp/
+*.checkpoint.json
+processing_checkpoint.json
