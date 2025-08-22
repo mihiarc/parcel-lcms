@@ -20,13 +20,16 @@ from .config import (
     RASTER_CRS,
     CHUNK_SIZE,
     N_WORKERS,
-    ENABLE_PROGRESS_BAR
+    ENABLE_PROGRESS_BAR,
+    PARALLEL_PROCESSING,
+    SPATIAL_ORDERING
 )
 from .data_loader import DataLoader
 from .preprocessor import DataPreprocessor  
 from .zonal_processor import ZonalStatsProcessor
 from .chunk_manager import ChunkManager
 from .result_aggregator import ResultAggregator
+from .parallel_processor import ParallelChunkProcessor
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +42,8 @@ def run_pipeline(
     resume: bool = False,
     dry_run: bool = False,
     output_format: str = "geoparquet",
-    method: str = "subpixel"
+    method: str = "subpixel",
+    parallel: Optional[bool] = None
 ) -> None:
     """Run the complete zonal statistics pipeline.
     
@@ -53,6 +57,7 @@ def run_pipeline(
         dry_run: Perform dry run without processing
         output_format: Output file format
         method: Zonal stats method ('subpixel', 'standard', 'center')
+        parallel: Use parallel processing (default: from config)
     """
     logger.info("=" * 60)
     logger.info("PARCEL LAND USE ZONAL STATISTICS PIPELINE")
@@ -64,6 +69,14 @@ def run_pipeline(
         # Initialize components
         logger.info("Initializing pipeline components")
         logger.info(f"Using {method} method for zonal statistics")
+        
+        # Determine if using parallel processing
+        use_parallel = parallel if parallel is not None else PARALLEL_PROCESSING
+        if use_parallel:
+            logger.info(f"Parallel processing enabled with {N_WORKERS} workers")
+        else:
+            logger.info("Sequential processing mode")
+        
         data_loader = DataLoader()
         preprocessor = DataPreprocessor()
         processor = ZonalStatsProcessor(n_workers=N_WORKERS)
@@ -104,7 +117,7 @@ def run_pipeline(
             parcels,
             target_crs=RASTER_CRS,
             raster_bounds=raster_metadata['bounds'],
-            min_area_m2=900  # 30m x 30m = 1 pixel minimum
+            min_area_m2=0  # Process all parcels, no minimum size
         )
         
         # Save original parcels for geometry join later
@@ -117,39 +130,77 @@ def run_pipeline(
         results_list = []
         chunk_stats = []
         
-        # Create progress bar if enabled
-        if ENABLE_PROGRESS_BAR:
-            chunk_iterator = tqdm(
-                chunk_manager.iterate_chunks(parcels_processed, resume=resume),
-                total=len(chunk_manager.get_unprocessed_chunks()) if resume else len(parcels_processed) // chunk_size + 1,
-                desc="Processing chunks"
+        if use_parallel:
+            # Parallel processing mode
+            logger.info("Using parallel processing")
+            
+            # Collect all chunks
+            all_chunks = []
+            for chunk_id, chunk in chunk_manager.iterate_chunks(parcels_processed, resume=resume):
+                all_chunks.append((chunk_id, chunk))
+            
+            # Initialize parallel processor
+            parallel_processor = ParallelChunkProcessor(
+                n_workers=N_WORKERS,
+                enable_progress=ENABLE_PROGRESS_BAR
             )
+            
+            # Define checkpoint callback
+            def checkpoint_callback(chunk_id, results_df):
+                chunk_manager.save_checkpoint(chunk_id, results_df)
+            
+            # Process chunks in parallel
+            if SPATIAL_ORDERING:
+                results_list, chunk_stats = parallel_processor.process_with_spatial_ordering(
+                    all_chunks,
+                    str(raster_path),
+                    method=method,
+                    checkpoint_callback=checkpoint_callback
+                )
+            else:
+                results_list, chunk_stats = parallel_processor.process_chunks_parallel(
+                    all_chunks,
+                    str(raster_path),
+                    method=method,
+                    checkpoint_callback=checkpoint_callback
+                )
         else:
-            chunk_iterator = chunk_manager.iterate_chunks(parcels_processed, resume=resume)
-        
-        # Process each chunk
-        for chunk_id, chunk in chunk_iterator:
-            logger.info(f"Processing chunk {chunk_id} ({len(chunk)} parcels)")
+            # Sequential processing mode (original implementation)
+            logger.info("Using sequential processing")
             
-            # Calculate zonal statistics with specified method
-            chunk_results, stats = processor.process_chunk(
-                chunk,
-                str(raster_path),
-                chunk_id,
-                method=method
-            )
+            # Create progress bar if enabled
+            if ENABLE_PROGRESS_BAR:
+                chunk_iterator = tqdm(
+                    chunk_manager.iterate_chunks(parcels_processed, resume=resume),
+                    total=len(chunk_manager.get_unprocessed_chunks()) if resume else len(parcels_processed) // chunk_size + 1,
+                    desc="Processing chunks"
+                )
+            else:
+                chunk_iterator = chunk_manager.iterate_chunks(parcels_processed, resume=resume)
             
-            if not chunk_results.empty:
-                results_list.append(chunk_results)
-                chunk_stats.append(stats)
+            # Process each chunk
+            for chunk_id, chunk in chunk_iterator:
+                logger.info(f"Processing chunk {chunk_id} ({len(chunk)} parcels)")
                 
-                # Save checkpoint
-                chunk_manager.save_checkpoint(chunk_id, chunk_results)
-            
-            # Log progress
-            if chunk_id % 10 == 0:
-                processed = sum(len(r) for r in results_list)
-                logger.info(f"Progress: {processed}/{len(parcels_processed)} parcels processed")
+                # Calculate zonal statistics with specified method
+                chunk_results, stats = processor.process_chunk(
+                    chunk,
+                    str(raster_path),
+                    chunk_id,
+                    method=method
+                )
+                
+                if not chunk_results.empty:
+                    results_list.append(chunk_results)
+                    chunk_stats.append(stats)
+                    
+                    # Save checkpoint
+                    chunk_manager.save_checkpoint(chunk_id, chunk_results)
+                
+                # Log progress
+                if chunk_id % 10 == 0:
+                    processed = sum(len(r) for r in results_list)
+                    logger.info(f"Progress: {processed}/{len(parcels_processed)} parcels processed")
         
         # Step 4: Aggregate results
         logger.info("-" * 40)
@@ -272,11 +323,31 @@ def main():
         help="Zonal statistics method (default: subpixel for 99%% better accuracy)"
     )
     
+    parser.add_argument(
+        "--parallel",
+        action="store_true",
+        help="Enable parallel processing (uses multiple CPU cores)"
+    )
+    
+    parser.add_argument(
+        "--no-parallel",
+        action="store_true",
+        help="Disable parallel processing (force sequential mode)"
+    )
+    
     args = parser.parse_args()
     
     # Setup logging
     logging.getLogger().setLevel(getattr(logging, args.log_level))
     setup_logging()
+    
+    # Determine parallel processing setting
+    parallel = None
+    if args.parallel:
+        parallel = True
+    elif args.no_parallel:
+        parallel = False
+    # Otherwise, use default from config
     
     # Run pipeline
     run_pipeline(
@@ -288,7 +359,8 @@ def main():
         resume=args.resume,
         dry_run=args.dry_run,
         output_format=args.output_format,
-        method=args.method
+        method=args.method,
+        parallel=parallel
     )
 
 if __name__ == "__main__":
